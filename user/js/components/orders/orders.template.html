@@ -1,0 +1,60 @@
+<!-- HEADER -->
+<div class="yh-header">
+	<div class="yh-header-c">
+		<div class="yh-header-content">Orders</div>
+	</div>
+</div>
+
+<!-- MAIN -->
+<div class="yh-page yh-order-history-page">
+  	<div class="yh-center-main">
+		<div>
+			<div ng-if="display.status === 1">
+				<div>
+					{{display.message}}
+				</div>
+				<div>Start you shopping now.</div>
+			</div>
+			<div class="order-history-item-c" ng-repeat="oh in orderHistoryService.data track by $index">
+				<div class="order-history-item-w">
+					<div class="order-history-item-image" ng-style="{'background-image':'url('+oh.imgPath+')', 'background-position':'center', 'background-size': 'cover'}"></div>
+					<div class="order-history-item-text">
+						<div class="order-history-top">
+							<div class="yh-order-history-visit-shop d-flex align-items-center" ng-click="onClickVisitShop(oh.shopId)">
+								<div>
+									{{ oh.shopName }}
+								</div>
+								<div>
+									({{ oh.shopStreetAddress }})
+								</div>
+								<div class="yh-left-space ion-ios-arrow-right"></div>
+							</div>
+							<div class="order-history-item-datetime">{{ oh.dateTime }}</div>
+						</div>
+
+
+						<div class="order-history-bottom">
+							<div class="d-flex justify-content-between align-items-center" ng-if="!oh.commentId">
+								<div class="order-history-item-name">{{ oh.name }}</div>
+								<span class="ion-android-close"></span>
+								<div>{{ oh.quantity }}</div>
+								<div>
+									<span class="yh-currency">€</span>
+									<span class="price">{{ oh.price }} </span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end">
+								<div ng-if="!oh.commentId" class="yh-btn yh-plain yh-small yh-right-space" ng-click="onClickRate(oh)">
+									review it
+								</div>
+								<div class="yh-btn yh-blue yh-small" ng-click="onClickBuyAgain(oh)">
+									buy again
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,157 @@
+module.exports = [
+	'$q',
+	'$http',
+	'token',
+	function($q, $http, token) {
+		function ProductModel() {
+			const data = {
+				products: [
+					{
+						id: 0,
+						type: {
+							en: 'mp',
+							cn: '手机'
+						},
+						name: 'P40 Pro',
+						model: 'P40 Pro',
+						rrp: '999',
+						spec: [
+							'CPU：HUAWEI Kirin 990 5G',
+							'Screen: 6.58-inch OLED Display',
+							'Storage: 8 GB RAM + 256 GB ROM ',
+							'Rear camera: 50MP Ultra Vision Camera  + 40MP Cine Camera + 12MP SuperSensing Telephoto Camera  + 3D Depth Sensing Camera',
+							'Front camera: 32MP Selfie Camera  + Depth Camera',
+							'Dual SIM' 
+						],
+						colorOptions: [
+							{
+								color: 'Black',
+							}, 
+							{
+								color: 'Silver'
+							},						
+						],
+						images: [],
+					},
+					{
+						id: 1,
+						type: {
+							en: 'mp',
+							cn: '手机'
+						},
+						name: 'P40',
+						model: 'P40',
+						rrp: '799',
+						spec: [
+							'CPU：HUAWEI Kirin 990 5G',
+							'Screen: 6.1-inch OLED Display',
+							'Storage: 8 GB RAM + 128 GB ROM ',
+							'Rear camera: 50MP Ultra Vision  + 16MP Ultra-Wide Angle Camera + 8MP Telephoto Camera',
+							'Front camera: 32MP Selfie Camera ',
+						],
+						colorOptions: [{color:'Black'}, {color:'Silver'}],
+						images: [],
+					},
+					{
+						id: 2,
+						type: {
+							en: 'mp',
+							cn: '手机'
+						},
+						name: 'P40 lite(4G)',
+						model: 'P40 lite(4G)',
+						rrp: '299',
+						spec: [
+							'CPU：HUAWEI Kirin 810',
+							'Screen：6.4 inch Full view display with Under-Display Camera',
+							'Storage：6 GB RAM +128 GB ROM',
+							'Rear Camera：48 MP AI Ultra-wide Quad Camera',
+							'Front Camera：16MP Single-lens Camera"',
+						],
+						colorOptions: [{color: 'Black'}],
+						images: [],
+					},
+					{
+						id: 3,
+						type: {
+							en: 'audio',
+							cn: '音频'
+						},
+						name: 'Freebuds 3',
+						model: '',
+						rrp: '179',
+						spec: [
+							'Hardware platform:HUAWEI Kirin A1',
+							'Bluetooth version:Bluetooth 5.1',
+							'Main Feature:1)A true wireless stereo earphone;2)Noise reduction;3) Wireless charging (charging case);4)Low power consumption, long battery life',
+						],
+						colorOptions: [{color: 'Black'}, {color: 'White'}],
+						images: [],
+					},
+					{
+						id: 4,
+						type: {
+							en: 'fashion',
+							cn: '穿戴'
+						},
+						name: 'Watch GT2',
+						model: '男表',
+						rrp: '299/249',
+						spec: [
+							'Size：46mm x 46mm x 10.7mm',
+							'Screen: 1.39”3D AMOLED 454*454',
+							'Battery：2 weeks long battery life（470mAh）/First In-House Developed Chip with Incredibly Low Power Consumption',
+							'GPS Positioning',
+							'Audio：Music / Bluetooth phone call / voice training guide',
+							'HUAWEI TruSleep™Scientific Sleep Tracking',
+							'TruSeen3.0 Provides Better Heart Rate Monitoring Experience',
+							'5ATM Water resistant',
+						],
+						colorOptions: [{color: 'Black', ref: 'Silicon strap'}, {color: 'Silver', ref: 'Silver strap'}],
+						images: [''],
+					},
+					{
+						id: 5,
+						type: {
+							en: 'fashion',
+							cn: '穿戴'
+						},
+						name: 'Watch GT2',
+						model: '女表',
+						rrp: '199',
+						spec: [
+							'Size: 42mm x 42mm x 9.3mm',
+							'Screen: 1.2”3D AMOLED, 390 x 390',
+							'Battery：1 week long battery life（230mAh）/First In-House Developed Chip with Incredibly Low Power Consumption',
+							'GPS Positioning',
+							'Audio：Music / Bluetooth phone call / voice training guide',
+							'HUAWEI TruSleep™Scientific Sleep Tracking',
+							'TruSeen3.0 Provides Better Heart Rate Monitoring Experience',
+							'5ATM Water resistant',
+						],
+						colorOptions: [{color: 'Black'}, {color: 'White'}],
+						images: [],
+					}
+				]
+			};
+
+
+			const getProducts = () => data.products;
+
+			const findById = (id) => {
+				for(let i = 0; i < data.products.length; i ++) {
+					if(data.products[i].id == id) return Object.assign({}, data.products[i]);
+				}
+				return null;
+			};
+
+			return {
+				getProducts,
+				findById,
+			};
+			
+		}
+
+		return ProductModel;
+	}
+];

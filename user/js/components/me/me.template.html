@@ -1,0 +1,81 @@
+<!-- HEADER -->
+<div class="yh-header">
+	<div class="yh-header-c">
+		<div class="yh-header-content">My Account</div>
+	</div>
+</div>
+
+<!-- MAIN -->
+<div class="yh-page yh-main-page">
+  	<div class="yh-center-main no-space">
+		<div class="yh-me-page">
+
+
+			<div ng-if="UserService.isLoaded" class="yh-me-h-blk-c d-flex justify-content-between">
+				<div class="yh-me-h-blk yh-shadow">
+					<div class="d-flex justify-content-between">
+						<div class="yh-me-blk-title">Voucher</div>
+						<div class="ion-card"></div>
+					</div>
+					<div><span class="big">5</span><span class="small"> unused</span></div>
+				</div>
+				<div class="yh-me-h-blk yh-shadow">
+					<div class="d-flex justify-content-between">
+						<div class="yh-me-blk-title">My Deposit</div>
+						<div class="ion-card"></div>
+					</div>
+					<div><span class="small">Credit</span></div>
+
+				</div>
+			</div>
+
+			<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-ios-contact-outline"></span>
+				<span class="yh-me-username-label">Username: </span>
+				<span class="yh-me-username">{{UserService.data.userName}}</span>
+			</div>
+
+	  		<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-ios-people-outline"></span>
+				<div>My Membership</div>
+			</div>
+<!-- 
+			<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-ios-chatboxes-outline"></span>
+				<div>Customer Service</div>
+			</div> -->
+
+	  		<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-android-favorite-outline"></span>
+				<div>My Favourite</div>
+			</div>
+
+
+			<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-ios-location-outline"></span>
+				<div>My Addresses</div>
+			</div>
+
+			<div before="ccc+000" after="fff+000" ng-if="UserService.isLoaded" class="yh-me-option" ng-click="onClickMyAddresses()">
+				<span class="yh-me-icon ion-ios-telephone-outline"></span>
+				<div>08*****877</div>
+			</div>
+			
+
+			<div before="ccc+000" after="fff+000" class="yh-me-option" ng-if="UserService.isLoaded">
+				<span class="yh-me-icon ion-log-out"></span>
+				<div ng-click="onClickLogout()">Log Out</div>
+			</div>
+
+			<div before="ccc+000" after="fff+000" class="yh-me-option" ng-if="!UserService.isLoaded" ng-click="onClickSignIn()">
+				<span class="yh-me-icon ion-log-in"></span>
+				<div>Sign In</div>
+			</div>
+
+			<div before="ccc+000" after="fff+000" class="yh-me-option" ng-if="!UserService.isLoaded"  ng-click="onClickRegister()">
+				<span class="yh-me-icon ion-ios-personadd-outline"></span>
+				<div>Register</div>
+			</div>
+		</div>
+	</div>
+</div>

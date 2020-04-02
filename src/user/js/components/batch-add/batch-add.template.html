@@ -1,0 +1,28 @@
+
+
+<div class="yh-batch-add-orders-c yh-page">
+	<h3>Add Batch</h3>
+	<div ng-repeat="h in history track by $index"> 
+		<div class="ion-android-cancel" ng-click="onClickRemove($index)"></div>
+		<textarea ng-model="history[$index]" class="yh-bo-str-input">
+		</textarea>
+	</div>
+
+	<div>
+		<div class="yh-batch-add-orders-des-item" ng-repeat="(name, os) in tempOrders">
+			{{name}}: {{os.description}}
+		</div>
+	</div>
+
+	<div class="yh-batch-add-orders-controll d-flex justify-content-between">
+		<div class="d-flex align-items-center">
+			<button class="yh-btn yh-gap-right-10" ng-click="onClickAddBatch()">Refersh</button>
+			<span>Total Customers ({{ num }})</span>
+		</div>
+		<div>
+			<button ng-click="onClickSave()" ng-disabled="disableSaveBtn" class="yh-btn">Save</button>
+		</div>
+	</div>
+	<div ng-click="onClickAddSs()" class="yh-orders-float-add">+</div>
+
+</div>

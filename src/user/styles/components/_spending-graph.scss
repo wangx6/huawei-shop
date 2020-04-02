@@ -1,0 +1,23 @@
+.hw-spending-graph-item{
+	margin-bottom: 4px;
+}
+
+.hw-spending-graph-bar{
+	height: 2px;
+	background-color: $pink;
+	// transition: width 1s
+	width: 0;
+}
+.hw-spending-graph-bar-container{
+	width: 80%;
+}
+.hw-spending-graph-name-container{
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.hw-spending-graph-total{
+	font-size: 4rem;
+	font-weight: 300;
+	// margin-bottom: 20px;
+}

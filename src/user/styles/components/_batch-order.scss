@@ -1,0 +1,42 @@
+.hw-batch-add-orders-c{
+	.ion-android-cancel{
+		font-size: 1.8rem;
+	}
+}
+.hw-bo-str-input {
+	width :100%;
+	min-height: 200px;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+.hw-add-orders-ss-c{
+	padding: 10px 0;
+}
+.hw-batch-add-orders-des-item{
+	background: #f6f6f6;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.hw-order-orders-ss-num{
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.hw-add-orders-ss{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.hw-batch-add-orders-controll{
+	position: fixed;
+	background-color: #eee;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 15px;
+	border-top: 1px solid #ccc;
+}

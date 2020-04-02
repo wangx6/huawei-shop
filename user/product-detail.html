@@ -1,0 +1,32 @@
+<!-- MAIN CARDS -->
+<div class="hw-header d-flex justify-content-center">
+	<div class="ion-ios-arrow-back hw-back" ng-click="onClickBack()"></div>
+	<div>Pick a color</div>
+</div>
+
+<div class="hw-page hw-product-detail-page">
+
+	<div class="hw-pd-color-list d-flex justify-content-between">
+		<div class="hw-pd-color-item-c" ng-repeat="c in data.colorOptions">
+			<div ng-click="onClickColorItem(c)" class="hw-pd-color-item d-flex justify-content-center align-items-center">
+				<div class="d-flex flex-column align-items-center">
+					<div style="height: 20px; width: 20px; border-radius: 10px; border: 1px solid #ccc; background-color: {{ c.color  }}"></div>
+					<div style="margin-top: 5px;">
+						{{ c.color }}
+					</div>
+					<div>{{ c.ref }}</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="d-flex justify-content-center">
+		<!-- <div class="hw-btn" ng-click="onClickAdd()">add</div> -->
+	</div>
+</div>
+
+
+
+
+
+

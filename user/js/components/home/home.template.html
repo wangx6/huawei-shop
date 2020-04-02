@@ -1,0 +1,120 @@
+<!-- MAIN -->
+<div class="yh-page yh-main-page">
+  <div class="yh-center-main">
+      <div class="yh-page-header">
+        <div class="yh-search-input-c" class="d-flex">
+          <div class="yh-search-input-w d-flex align-items-center justify-content-between">
+            <div class="yh-search-inputbox-c">
+              <div class="ion-ios-location-outline"></div>
+              <input ng-click="onClickSearch()" class="yh-shop-search-input yh-noselect" ng-model="location" placeholder="location / product" type="" name="">
+            </div>
+          </div>
+          <!-- <div class="yh-btn yh-search-btn" ng-click="onKeyupLocation()">Go</div> -->
+        </div>
+      </div>
+      <div class="yh-main-page-bottom-blk">
+        <div class="yh-main-advert" yh-slide-show>
+          <div ng-click="onClickHomeShop()" class="yh-main-advert-blk yh-slide-show-slide-js" style="
+                      background-image: url(https://static.vecteezy.com/system/resources/previews/000/570/370/non_2x/sale-banner-template-design-big-sale-special-offer-end-of-season-special-offer-banner-vector.jpg); 
+                      background-size: cover;
+                      background-position: center;
+                  ">
+          </div>
+          <div ng-click="onClickHomeShop()" class="yh-main-advert-blk yh-slide-show-slide-js" style="
+                      background-image: url(http://upload.art.ifeng.com/2016/1031/1477877181552.jpg); 
+                      background-size: cover;
+                  ">
+          </div>
+          <div ng-click="onClickHomeShop()" class="yh-main-advert-blk yh-slide-show-slide-js" style="
+                      background-image: url(https://t3.ftcdn.net/jpg/01/37/64/18/240_F_137641836_sA0qdMY3jY3vKij3FqYa0mPWLKFxr35Z.jpg); 
+                      background-size: cover;
+                  ">
+          </div>
+        </div>
+        <div class="yh-main-special-offer-c">
+          <div ng-click="onClickHomeShop()" class="yh-shop-blk yh-main-special-offer-list" ng-repeat="s in specialOffers">
+            <div class="yh-main-spe-c">
+              <div class="yh-main-spe-w">
+                <div class="yh-shop-blk-title">
+                  {{ s.name }}
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                    <div class="yh-shop-blk-rating">4.6</div>
+                    <div class="yh-shop-blk-average-cost">€20</div>
+                  </div>
+                  <div>Dublin/Town</div>
+                </div>
+                <div class="yh-shop-blk-special-offers d-flex">
+                  <div class="yh-shop-blk-sticker">Deal</div>
+                  <div>Meal for one €10, Meal for four €30</div>
+                </div>
+                <div class="d-flex align-items-center flex-wrap">
+                  <div class="yh-tag-blue">Ranking</div>
+                  <div class="yh-tag-green">High Returning Customers</div>
+                  <div class="yh-tag-green">Ranking</div>
+                  <div class="yh-tag-red">High Returning Customers</div>
+                </div>
+                <div class="yh-shop-blk-img-c d-flex justify-content-between">
+                  
+                  <div class="yh-shop-blk-img yh-main-advert-blk yh-slide-show-slide-js" style="
+                                        background-image: url(http://upload.art.ifeng.com/2016/1031/1477877181552.jpg); 
+                                        background-size: cover;
+                                    ">
+                  </div>
+                  
+                  <div class="yh-shop-blk-img yh-main-advert-blk yh-slide-show-slide-js" style="
+                                      background-image: url(http://upload.art.ifeng.com/2016/1031/1477877181552.jpg); 
+                                      background-size: cover;
+                                  ">
+                  </div>
+                  <div class="yh-shop-blk-img yh-main-advert-blk yh-slide-show-slide-js" style="
+                                      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQyEx6tnar-btAqgwqTgWmDqMXL_Q_JLyc0TqE5APlPFRJxgyYFQ&s); 
+                                      background-size: cover;
+                                  ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="yh-main-hot-list">
+          <div class="yh-shop-blk yh-main-special-offer-list" ng-repeat="s in recommended">
+            <div class="yh-main-spe-c">
+              <div class="yh-main-spe-w">
+                <div class="yh-shop-blk-title">
+                  {{ s.name }}
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                    <div class="yh-shop-blk-rating">4.6</div>
+                    <div class="yh-shop-blk-average-cost">€20</div>
+                  </div>
+                  <div>Dublin/Town</div>
+                </div>
+                <div class="yh-shop-blk-special-offers d-flex">
+                  <div class="yh-shop-blk-sticker">Deal</div>
+                  <div>Meal for one €10, Meal for four €30</div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="yh-shop-blk-discount d-flex align-items-center">
+                    <div class="current-price">€<span class="discount-price">20</span></div>
+                    <div class="original-price">€40</div>
+                    <!-- <div class="discount-label">50% OFF</div> -->
+                  </div>
+                  <div class="yh-tag-red">Ranking</div>
+                  <div class="yh-tag-blue">High Returning Customers</div>
+                </div>
+                <div class="yh-shop-blk-img-c d-flex justify-content-between">
+                  <div class="yh-shop-blk-img"></div>
+                  <div class="yh-shop-blk-img"></div>
+                  <div class="yh-shop-blk-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <yh-cart></yh-cart>
+  </div>
+</div>

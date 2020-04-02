@@ -1,0 +1,61 @@
+.hw-comfirmation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4000;
+}
+
+.hw-comfirmation-c {
+    position: fixed;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-55%);
+    left: 15%;
+    border-radius: 4px;
+    width: 70%;
+    min-height: 20%;
+    z-index: 4001;
+}
+
+.hw-comfirmation-content {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hw-comfirmation-icon {
+    font-size: 2rem;
+    color: $main-color;
+}
+
+.hw-comfirmation-keep-shopping-link {
+    text-decoration: underline;
+    font-size: 1rem;
+    margin-top: 100px;
+}
+
+.hw-comfirmation-message {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 13px;
+}
+
+.hw-comfirmation-btn-wrap {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(center);
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+.hw-comfirmation-btn {
+    width: 30%;
+}

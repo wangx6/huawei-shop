@@ -1,0 +1,47 @@
+{
+  "name": "rockandroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-animate": "^1.7.5",
+    "angular-hammer": "^2.2.0",
+    "angular-route": "^1.7.5",
+    "bootstrap": "^4.3.1",
+    "cheerio": "^1.0.0-rc.3",
+    "expect.js": "^0.3.1",
+    "geolib": "^3.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-filter": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "string-replace-webpack-plugin": "^0.1.3",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-uglify": "^3.0.2",
+    "html-loader": "^0.5.5",
+    "i": "^0.3.6",
+    "mocha": "^7.0.1",
+    "npm": "^6.11.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "test": "mocha 'src/**/__test__/**/*.js'",
+    "test:watch": "mocha 'src/**/__test__/**/*.js' --watch",
+    "dev": "gulp dev-replace && concurrently --kill-others \"webpack --watch\" \"gulp\" \"npm run test:watch\"",
+    "build": "webpack -p && gulp user_sass && gulp replace"
+  },
+  "author": "'YingHan <'wangx6@gmail.com'>",
+  "license": "ISC"
+}

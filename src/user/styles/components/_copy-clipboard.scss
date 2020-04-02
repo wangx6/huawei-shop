@@ -1,0 +1,13 @@
+.hw-copy-clipboard-notification{
+	position: fixed;
+	bottom: 20px;
+	width: 90%;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #ccc;
+	left: 5%;
+	color: #fff;
+	background-color: $green;
+	border-radius: 6px;
+	z-index: 1001;
+}

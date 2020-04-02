@@ -1,0 +1,87 @@
+<div class="yh-shops-page">
+	<div>
+		<div class="">
+			<div class="yh-shops-control d-flex justify-content-between align-items-center">
+				<div class="sort d-flex">
+					<div ng-click="onClickGeneralSort()" class="item">
+						<span>General Sort</span>
+						<span class="ion-arrow-down-b"></span>
+					</div>
+					<div ng-click="onClickSortByDistance()" class="item">Distance</div>
+					<div ng-click="onClickSortByVolumn()" class="item">Volumn</div>
+				</div>
+
+				<!-- <div class="filter">
+					<div ng-click="onClickFilter()" class="item">
+						<span class="">filter</span>
+						<span class="ion-ios-settings-strong"></span>
+					</div>
+				</div> -->
+			</div>
+			<div  class="yh-shop-item d-flex"  ng-click="onClickShop(s)" ng-repeat="s in shopStoreService.active track by $index">
+
+
+				<div class="yh-shop-item-image" ng-style="{'background-image' : 'url('+s.bannerUrl+')'}">
+					<!-- <div class="yh-shop-item-shop-name">{{ s.data.name }}</div> -->
+				</div>
+
+
+				<div class="yh-shop-item-main">
+
+					<div class="d-flex align-items-center">
+						<span class="name">{{ s.name }}</span>
+						<span class="grey-small">({{s.distance}}km)</span>
+					</div>
+					<div class="d-flex justify-content-between">
+						<span class="grey-small">({{s.streetAddress}})</span>
+						<span class="grey-small">{{s.avgDeliveryTime}}min</span>				
+					</div>
+
+
+					<div class="d-flex align-items-center">
+						<span class="yh-shop-item-star ion-ios-star"></span>
+						<div class="rating">{{ s.rating }}</div>
+						<div class="grey-small">{{s.semanticRating}}</div>
+					</div>
+
+					<div class="d-flex align-items-center">
+						<div class="yh-shop-item-operating-time">8am - 6pm</div>
+					</div>
+
+						
+					<div class="d-flex flex-wrap">
+						<div class="yh-tag-blue">
+							<span>€{{s.deliveryCharge}}</span>
+							<span class="ion-android-bicycle"></span>
+						</div>
+						<div class="yh-tag-green">Sales/Month {{s.volumn}}</div>
+						<div class="yh-tag-red">Min Order €{{s.minAmountForDeliver}}</div>
+						<div class="yh-tag-red">5% Off</div>
+					
+						<div ng-if="s.data.specialOffer" class="yh-tag-red"><span class="ion-ios-pricetags"></span>special offer</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="yh-shop-sorter-r" ng-class="{active: sorter.show}">
+		<div class="yh-shop-sorter-c">
+			<div class="yh-shop-sorter-w">
+				<div ng-repeat="i in sorter.items" ng-click="onClickSorterItem(i)" ng-class="{'active-item': i.selected}" class="yh-shop-sorter-item d-flex justify-content-between align-items-center">
+					<div>{{i.val}}</div>
+					<div ng-show="i.selected" class="active-icon ion-android-checkbox-outline"></div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="yh-shop-sorter-mask yh-mask" ng-class="{active: sorter.show}" ng-click="onClickSorterMask()"></div>
+	</div>
+	<!-- <div class="yh-shop-filter-r" ng-class="{active: filter.show}">
+		<div class="yh-shop-filter-c">
+			<div class="yh-shop-filter-w"></div>
+		</div>
+		<div class="yh-shop-filter-mask yh-mask" ng-class="{active: filter.show}" ng-click="onClickFilterMask()"></div>
+	</div> -->
+</div>

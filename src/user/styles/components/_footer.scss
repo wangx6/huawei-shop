@@ -1,0 +1,38 @@
+.hw-footer{
+	border-top: 1px solid #eee;
+	padding: 15px 20px 8px 20px;
+	background-color: #fff;
+	position: fixed;
+	color: $black;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-weight: bold;
+
+	.ion-ios-settings-strong{
+		font-size: 1.9rem;
+		color: $black;
+	}
+
+	.hw-footer-all,
+	.hw-footer-pending,
+	.hw-footer-otw {
+		position: relative;
+	}
+	.hw-footer-all-num,
+	.hw-footer-pending-num,
+	.hw-footer-otw-num,
+	 {
+		position: absolute;
+		top: -10px;
+		right: -15px;
+		border: 1px solid #fff;
+		background-color: $red;
+		padding: 0px;
+		height: 20px;
+		font-size: 0.8rem;
+		min-width: 20px;
+		border-radius: 10px;
+		color: #fff;
+	}
+}

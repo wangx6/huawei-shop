@@ -1,0 +1,124 @@
+(function() {
+	'use strict';
+
+	//---------------------------------------------------------
+	// -- dev dependencies
+	//---------------------------------------------------------
+	const angular = require('angular');
+	const jQuery = require('jQuery');
+	// const moment = require('moment');
+
+	//---------------------------------------------------------
+	// -- app dependencies
+	//---------------------------------------------------------
+	const util = require('./service/util.service');
+	//---------------------------------------------------------
+	// -- app model
+	//-------------	--------------------------------------------
+	const ProductModel = require('./model/product.model');
+	
+	//---------------------------------------------------------
+	// -- DIRECTIVES
+	//---------------------------------------------------------
+	// const addOrders = require('./components/add-orders/add-orders.directive');
+
+	//---------------------------------------------------------
+	// -- CONTROLLER
+	//---------------------------------------------------------
+	const productController = require('./controller/product.controller');
+	const productDetailController = require('./controller/product-detail.controller');
+	const bagController = require('./controller/bag.controller');
+	
+	//---------------------------------------------------------
+	// -- TEMPLATE
+	//---------------------------------------------------------
+	const productTemplate = require('../../../user/product.html');
+	// const deliveryDetailsTemplate = require('../../../user/delivery-details.html');
+
+	// const editOrderTemplate = require('../../../user/js/components/edit-order/edit-order.template.html');
+	// const addOrdersTemplate = require('../../../user/js/components/add-orders/add-orders.template.html');
+	// const spendingGraphTemplate = require('../../../user/js/components/spending-graph/spending-graph.template.html');
+	// const shopSearchResultsTemplate = require('../../../user/js/components/shops/shops.template.html');
+
+	//---------------------------------------------------------
+	// -- app dependencies
+	//---------------------------------------------------------
+	const app = angular.module('huawei-shop', [ require('angular-route'), require('angular-animate')]);
+	// app.run(['$templateCache','$location', function($templateCache, us, location) {
+		// $templateCache.put('products.php', productsTemplate);
+		// $templateCache.put('cart.html', cartTemplate);
+		// $templateCache.put('checkout.php', checkoutTemplate);
+		// $templateCache.put('review.html', reviewTemplate);
+		// $templateCache.put('main.html', mainTemplate);
+
+		// preload directive template
+		// $templateCache.put('./js/components/edit-order/edit-order.template.html', editOrderTemplate);
+		// $templateCache.put('./js/components/spending-graph/spending-graph.template.html', spendingGraphTemplate);
+		// $templateCache.put('./js/components/add-orders/add-orders.template.html', addOrdersTemplate);
+		// $templateCache.put('./js/components/shops/shops.template.html', shopSearchResultsTemplate);
+	// }]);
+
+	//---------------------------------------------------------
+	//-- constants
+	//---------------------------------------------------------
+	app.constant('jQuery', jQuery);
+	app.constant('token', document.getElementById('rr-session-token').value);
+
+	//---------------------------------------------------------
+	//-- directives
+	//---------------------------------------------------------
+	app.factory('ProductModel', ProductModel);
+	// app.factory('StatisticsModel', StatisticsModel);
+	// app.factory('SeasonModel', SeasonModel);
+
+	//---------------------------------------------------------
+	//-- services
+	//---------------------------------------------------------
+	app.service('productService', ['ProductModel', function(ProductModel) { return ProductModel(); }]);
+	// app.service('statisticsService', ['StatisticsModel', function(StatisticsModel) { return new StatisticsModel(); }]);
+	// app.service('batchService', ['BatchModel', function(BatchModel) { return new BatchModel(); }]);
+
+	//---------------------------------------------------------
+	//-- controllers
+	//---------------------------------------------------------
+	app.controller('productController', productController);
+	app.controller('productDetailController', productDetailController);
+	app.controller('bagController', bagController);
+	
+
+	/**
+	 * 
+	 * @param
+	 * @return
+	 */
+	// app.directive('yhAddOrders', addOrders);
+	// app.directive('yhEditOrder', editOrder);
+	// app.directive('yhBatch', batch);
+	// app.directive('yhSpinner', spinner);
+	// app.directive('yhWarning', warning);
+	// app.directive('yhComfirmation', comfirmation);
+	// app.directive('yhLogin', login);
+	// app.directive('yhMenu', menu);
+	// app.directive('ccjmneCardFlip', flip);
+	// app.directive('yhSpendingGraph', spendingGraph);
+	// app.directive('yhBatchAdd', batchAdd);
+	// app.directive('yhCopyClipboard', copyClipboard);
+
+	//---------------------------------------------------------
+	//-- router configuration
+	//---------------------------------------------------------
+	app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
+	    $routeProvider
+	    	.when('/', {templateUrl : 'product.html'})
+	    	.when('/product', {templateUrl : 'product.html', controller: 'productController'})
+	    	.when('/product-detail', {templateUrl : 'product-detail.html', controller:'productDetailController'})
+	    	.when('/bag', {templateUrl : 'bag.html', controller: 'bagController'})
+	    	// .when('/hermes', {templateUrl : 'hermes.html', controller: 'hermesController'})
+	    	// .when('/add-order', {templateUrl : 'add-order.html'})
+	    	// .when('/batch-add', {templateUrl : 'batch-add.html'})
+	    	// .when('/user-purchase', {templateUrl : 'user-purchase.html', controller: 'userPurchaseController'})
+	    	// .when('/invoice', {templateUrl : 'invoice.html', controller: 'invoiceController'})
+	    	// .when('/data-analytics', {templateUrl : 'data-analytics.html', controller: 'dataAnalyticsController'})
+	    }
+	]);
+})();

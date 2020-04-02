@@ -1,0 +1,19 @@
+<div class="yh-header" ng-if="headerService.show">
+	<div class="yh-header-c">
+
+		<div ng-if="headerService.showBack" class="ion-ios-arrow-back yh-header-back" ng-click="onClickBack()"></div>
+		<!-- <div ng-if="headerService.showMenu" class="yh-header-menu ion-android-menu" ng-click="onClickMenu()"></div> -->
+		<div ng-if="headerService.showHeaderContent" class="yh-header-content">{{headerService.headerContent}}</div>
+		<div ng-if="headerService.showLogo" class="yh-logo yh-header-logo"><span class="">70</span><span class="">Kiss</span></div>
+
+		<div ng-if="headerService.showCart" class="yh-header-cart-c">
+			<div class="yh-header-bag ion-bag" ng-click="onClickCart()">
+				<button class="yh-header-cart-num">
+					{{cartService.data.totalNumOfItems}}
+				</button>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
