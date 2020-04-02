@@ -32,5 +32,4 @@ function(location, timeout, s, rs, $controller, win, productService, $routeParam
 	}
 
 	init();
-
 }];
