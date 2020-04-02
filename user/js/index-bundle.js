@@ -170,7 +170,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\nfunction(location, timeout, s, rs, $controller, win, productService) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 1000);\r\n\tconsole.log(productService.getProducts());\r\n\ts.productService = productService;\r\n\r\n\ts.onClickItem = (item) => {\r\n\t\tconsole.log(item);\r\n\t}\r\n\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/bag.controller.js?");
+eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\n\t'$routeParams',\r\nfunction(location, timeout, s, rs, $controller, win, productService, $routeParams) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 1000);\r\n\t\r\n\ts.productService = productService;\r\n\r\n\tlet id = null;\r\n\tlet color = null;\r\n\ts.bag = [];\r\n\r\n\tconst init = () => {\r\n\t\tid = $routeParams.id;\r\n\t\tpcolor = $routeParams.color;\r\n\t\tlet { colorOptions, ...rest } = productService.findById(id)\r\n\t\ts.bag.push(Object.assign({}, {color: pcolor, ...rest}));\r\n\t}\r\n\r\n\ts.onClickBack = () => {\r\n\t\tlocation.path('/product-detail');\r\n\t}\r\n\r\n\ts.onClickPay = () => {\r\n\t\tconsole.log('pay now....');\r\n\t}\r\n\r\n\tinit();\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/bag.controller.js?");
 
 /***/ }),
 
@@ -181,7 +181,7 @@ eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\n\t'$routeParams',\r\nfunction(location, timeout, s, rs, $controller, win, productService, $routeParams) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 1000);\r\n\r\n\tlet id = '';\r\n\r\n\ts.data = null;\r\n\ts.productService = productService;\r\n\r\n\tconst init = () => {\r\n\t\tid = $routeParams.id;\r\n\t\ts.data = Object.assign({}, productService.findById(id));\r\n\t}\r\n\r\n\ts.onClickBack = () => {\r\n\t\tlocation.path('/product').search({});\r\n\t}\r\n\r\n\ts.onClickColorItem = (color) => {\r\n\t\tlocation.path('/bag').search({color: color.color});\r\n\t}\r\n\r\n\tinit();\r\n\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/product-detail.controller.js?");
+eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\n\t'$routeParams',\r\nfunction(location, timeout, s, rs, $controller, win, productService, $routeParams) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 10);\r\n\r\n\tlet id = '';\r\n\r\n\ts.data = null;\r\n\ts.productService = productService;\r\n\r\n\tconst init = () => {\r\n\t\tid = $routeParams.id;\r\n\t\ts.data = Object.assign({}, productService.findById(id));\r\n\t}\r\n\r\n\ts.onClickBack = () => {\r\n\t\tlocation.path('/product').search({});\r\n\t}\r\n\r\n\ts.onClickColorItem = (color) => {\r\n\t\tlocation.path('/bag').search({id: id, color: color.color});\r\n\t}\r\n\r\n\tinit();\r\n\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/product-detail.controller.js?");
 
 /***/ }),
 
@@ -192,7 +192,7 @@ eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\nfunction(location, timeout, s, rs, $controller, win, productService) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 1000);\r\n\ts.productService = productService;\r\n\r\n\ts.onClickItem = (item) => {\r\n\t\tlocation.path('/product-detail').search({id: item.id});\r\n\t}\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/product.controller.js?");
+eval("module.exports = [\r\n\t'$location', \r\n\t'$timeout', \r\n\t'$scope',\r\n\t'$rootScope',\r\n\t'$controller',\r\n\t'$window',\r\n\t'productService',\r\nfunction(location, timeout, s, rs, $controller, win, productService) {\r\n\ttimeout(function() { win.scrollTo(0, 0);}, 10);\r\n\ts.productService = productService;\r\n\r\n\ts.onClickItem = (item) => {\r\n\t\tlocation.path('/product-detail').search({id: item.id});\r\n\t}\r\n\r\n}];\r\n\n\n//# sourceURL=webpack:///./src/user/js/controller/product.controller.js?");
 
 /***/ }),
 
@@ -236,7 +236,7 @@ eval("module.exports = ['$window', '$timeout', function(win, timeout) {\r\n    r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \" <div class=\\\"hw-header d-flex justify-content-center\\\"> <div>Huawei Shop</div> </div> <div class=\\\"hw-page hw-product-page\\\"> <div class=hw-product-list> <div class=hw-product-list-c> <div ng-click=onClickItem(p) class=hw-product-item ng-repeat=\\\"p in productService.getProducts()\\\"> <div class=hw-product-item-name>{{ p.name }} {{ p.model !== p.name ? p.model : '' }}</div> <div class=hw-product-item-spec> <div ng-repeat=\\\"s in p.spec\\\">{{ s }}</div> </div> <div class=\\\"hw-product-item-footer d-flex justify-content-between align-items-center\\\"> <div>€{{p.rrp}}</div> <div class=hw-btn>BUY</div> </div> </div> </div> </div> </div> \";\n\n//# sourceURL=webpack:///./user/product.html?");
+eval("module.exports = \" <div class=\\\"hw-header d-flex justify-content-center\\\"> <div>Huawei Shop</div> </div> <div class=\\\"hw-page hw-product-page\\\"> <div class=hw-product-list> <div class=hw-product-list-c> <div class=hw-product-item ng-repeat=\\\"p in productService.getProducts()\\\"> <div class=hw-product-item-name>{{ p.name }} {{ p.model !== p.name ? p.model : '' }}</div> <div class=hw-product-item-spec> <div ng-repeat=\\\"s in p.spec\\\">{{ s }}</div> </div> <div class=\\\"hw-product-item-footer d-flex justify-content-between align-items-center\\\"> <div>€{{p.rrp}}</div> <div ng-click=onClickItem(p) class=hw-btn>BUY</div> </div> </div> </div> </div> </div> \";\n\n//# sourceURL=webpack:///./user/product.html?");
 
 /***/ })
 

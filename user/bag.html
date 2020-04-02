@@ -1,10 +1,46 @@
 <!-- MAIN CARDS -->
 <div class="hw-header d-flex justify-content-center">
-	<div>Bag</div>
+	<div class="ion-ios-arrow-back hw-back" ng-click="onClickBack()"></div>
+	<div>Your Cart</div>
 </div>
 
 <div class="hw-page hw-bag-page">
-	
+	<div ng-repeat="i in bag">
+		<div class="d-flex">
+			<div style="height: 60px; width: 50px; background-color: #ccc; margin-right: 10px;"></div>
+			<div style="width: 100%;">
+				<div class="d-flex justify-content-between">
+					<div>
+						{{ i.name }}
+					</div>
+					<div>{{ i.color }}</div>
+					<div>
+						€{{ i.rrp }}
+					</div>
+					
+				</div>
+				<div>
+					Order today, delivers
+				</div>
+				
+			</div>
+		</div>
+
+		<div style="margin-top: 20px; padding: 10px 10px; background-color: #f6f6f6;">
+			<div>
+				Cart subtotal
+			</div>
+			<div>
+				Includes VAT of
+			</div>
+			<div style="color: #aaa;">Shipping is FREE.</div>
+		</div>
+
+		<div class="hw-btn" ng-click="onClickPay()" style="margin-top: 20px; font-size: 1rem; padding: 15px 0; width:100%;">
+			Buy with Huawei pay
+		</div>
+
+	</div>
 </div>
 
 

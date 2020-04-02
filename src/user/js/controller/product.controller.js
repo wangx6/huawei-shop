@@ -7,7 +7,7 @@ module.exports = [
 	'$window',
 	'productService',
 function(location, timeout, s, rs, $controller, win, productService) {
-	timeout(function() { win.scrollTo(0, 0);}, 1000);
+	timeout(function() { win.scrollTo(0, 0);}, 10);
 	s.productService = productService;
 
 	s.onClickItem = (item) => {

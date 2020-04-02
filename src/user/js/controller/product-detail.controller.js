@@ -8,7 +8,7 @@ module.exports = [
 	'productService',
 	'$routeParams',
 function(location, timeout, s, rs, $controller, win, productService, $routeParams) {
-	timeout(function() { win.scrollTo(0, 0);}, 1000);
+	timeout(function() { win.scrollTo(0, 0);}, 10);
 
 	let id = '';
 
@@ -25,7 +25,7 @@ function(location, timeout, s, rs, $controller, win, productService, $routeParam
 	}
 
 	s.onClickColorItem = (color) => {
-		location.path('/bag').search({color: color.color});
+		location.path('/bag').search({id: id, color: color.color});
 	}
 
 	init();
