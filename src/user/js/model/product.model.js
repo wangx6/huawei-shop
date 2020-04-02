@@ -15,6 +15,7 @@ module.exports = [
 						name: 'P40 Pro',
 						model: 'P40 Pro',
 						rrp: '999',
+						imgUrl: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p40-pro-plus/images/design/material-black-xs.webp',
 						spec: [
 							'CPU：HUAWEI Kirin 990 5G',
 							'Screen: 6.58-inch OLED Display',
@@ -42,6 +43,7 @@ module.exports = [
 						name: 'P40',
 						model: 'P40',
 						rrp: '799',
+						imgUrl: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p40/images/design/design-intro-a-xs.webp',
 						spec: [
 							'CPU：HUAWEI Kirin 990 5G',
 							'Screen: 6.1-inch OLED Display',
@@ -61,6 +63,7 @@ module.exports = [
 						name: 'P40 lite(4G)',
 						model: 'P40 lite(4G)',
 						rrp: '299',
+						imgUrl: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p40/images/design/colors/1-right-a.webp',
 						spec: [
 							'CPU：HUAWEI Kirin 810',
 							'Screen：6.4 inch Full view display with Under-Display Camera',
@@ -80,6 +83,7 @@ module.exports = [
 						name: 'Freebuds 3',
 						model: '',
 						rrp: '179',
+						imgUrl: 'https://www.carphonewarehouse.ie/CPW/media/2019-landing-pages/huawei-freebuds-3/huawei-freebuds-black.jpg',
 						spec: [
 							'Hardware platform:HUAWEI Kirin A1',
 							'Bluetooth version:Bluetooth 5.1',
@@ -97,6 +101,7 @@ module.exports = [
 						name: 'Watch GT2',
 						model: '男表',
 						rrp: '299/249',
+						imgUrl: 'https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt2/img/huawei-watch-gt2-watch01.jpg',
 						spec: [
 							'Size：46mm x 46mm x 10.7mm',
 							'Screen: 1.39”3D AMOLED 454*454',
@@ -119,6 +124,7 @@ module.exports = [
 						name: 'Watch GT2',
 						model: '女表',
 						rrp: '199',
+						imgUrl: 'https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/list-image/wearables/watch-gt2/watch-gt2-listimage-Night-Black.png',
 						spec: [
 							'Size: 42mm x 42mm x 9.3mm',
 							'Screen: 1.2”3D AMOLED, 390 x 390',
