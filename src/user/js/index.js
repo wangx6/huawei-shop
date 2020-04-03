@@ -28,6 +28,7 @@
 	const productController = require('./controller/product.controller');
 	const productDetailController = require('./controller/product-detail.controller');
 	const bagController = require('./controller/bag.controller');
+	const checkoutController = require('./controller/checkout.controller');
 	
 	//---------------------------------------------------------
 	// -- TEMPLATE
@@ -68,15 +69,11 @@
 	//-- directives
 	//---------------------------------------------------------
 	app.factory('ProductModel', ProductModel);
-	// app.factory('StatisticsModel', StatisticsModel);
-	// app.factory('SeasonModel', SeasonModel);
 
 	//---------------------------------------------------------
 	//-- services
 	//---------------------------------------------------------
 	app.service('productService', ['ProductModel', function(ProductModel) { return ProductModel(); }]);
-	// app.service('statisticsService', ['StatisticsModel', function(StatisticsModel) { return new StatisticsModel(); }]);
-	// app.service('batchService', ['BatchModel', function(BatchModel) { return new BatchModel(); }]);
 
 	//---------------------------------------------------------
 	//-- controllers
@@ -84,6 +81,7 @@
 	app.controller('productController', productController);
 	app.controller('productDetailController', productDetailController);
 	app.controller('bagController', bagController);
+	app.controller('checkoutController', checkoutController);
 	
 
 	/**
@@ -92,17 +90,6 @@
 	 * @return
 	 */
 	// app.directive('yhAddOrders', addOrders);
-	// app.directive('yhEditOrder', editOrder);
-	// app.directive('yhBatch', batch);
-	// app.directive('yhSpinner', spinner);
-	// app.directive('yhWarning', warning);
-	// app.directive('yhComfirmation', comfirmation);
-	// app.directive('yhLogin', login);
-	// app.directive('yhMenu', menu);
-	// app.directive('ccjmneCardFlip', flip);
-	// app.directive('yhSpendingGraph', spendingGraph);
-	// app.directive('yhBatchAdd', batchAdd);
-	// app.directive('yhCopyClipboard', copyClipboard);
 
 	//---------------------------------------------------------
 	//-- router configuration
@@ -113,12 +100,7 @@
 	    	.when('/product', {templateUrl : 'product.html', controller: 'productController'})
 	    	.when('/product-detail', {templateUrl : 'product-detail.html', controller:'productDetailController'})
 	    	.when('/bag', {templateUrl : 'bag.html', controller: 'bagController'})
-	    	// .when('/hermes', {templateUrl : 'hermes.html', controller: 'hermesController'})
-	    	// .when('/add-order', {templateUrl : 'add-order.html'})
-	    	// .when('/batch-add', {templateUrl : 'batch-add.html'})
-	    	// .when('/user-purchase', {templateUrl : 'user-purchase.html', controller: 'userPurchaseController'})
-	    	// .when('/invoice', {templateUrl : 'invoice.html', controller: 'invoiceController'})
-	    	// .when('/data-analytics', {templateUrl : 'data-analytics.html', controller: 'dataAnalyticsController'})
+	    	.when('/checkout', {templateUrl : 'checkout.html', controller: 'checkoutController'})
 	    }
 	]);
 })();

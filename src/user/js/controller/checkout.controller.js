@@ -12,24 +12,14 @@ function(location, timeout, s, rs, $controller, win, productService, $routeParam
 	
 	s.productService = productService;
 
-	let id = null;
-	let color = null;
-	s.bag = [];
-
-	const init = () => {
-		id = $routeParams.id;
-		pcolor = $routeParams.color;
-		let { colorOptions, ...rest } = productService.findById(id)
-		s.bag.push(Object.assign({}, {color: pcolor, ...rest}));
-	}
 
 	s.onClickBack = () => {
 		location.path('/product-detail');
 	}
 
 	s.onClickPay = () => {
-		location.path('/checkout')
+		console.log('pay now....');
 	}
 
-	init();
+
 }];
