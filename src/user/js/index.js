@@ -16,11 +16,12 @@
 	// -- app model
 	//-------------	--------------------------------------------
 	const ProductModel = require('./model/product.model');
+	const BagModel = require('./model/bag.model');
 	
 	//---------------------------------------------------------
 	// -- DIRECTIVES
 	//---------------------------------------------------------
-	// const addOrders = require('./components/add-orders/add-orders.directive');
+	const footer = require('./components/footer/footer.directive');
 
 	//---------------------------------------------------------
 	// -- CONTROLLER
@@ -36,7 +37,7 @@
 	const productTemplate = require('../../../user/product.html');
 	// const deliveryDetailsTemplate = require('../../../user/delivery-details.html');
 
-	// const editOrderTemplate = require('../../../user/js/components/edit-order/edit-order.template.html');
+	const footerTemplate = require('../../../user/js/components/footer/footer.template.html');
 	// const addOrdersTemplate = require('../../../user/js/components/add-orders/add-orders.template.html');
 	// const spendingGraphTemplate = require('../../../user/js/components/spending-graph/spending-graph.template.html');
 	// const shopSearchResultsTemplate = require('../../../user/js/components/shops/shops.template.html');
@@ -45,19 +46,19 @@
 	// -- app dependencies
 	//---------------------------------------------------------
 	const app = angular.module('huawei-shop', [ require('angular-route'), require('angular-animate')]);
-	// app.run(['$templateCache','$location', function($templateCache, us, location) {
+	app.run(['$templateCache','$location', function($templateCache, us, location) {
 		// $templateCache.put('products.php', productsTemplate);
 		// $templateCache.put('cart.html', cartTemplate);
 		// $templateCache.put('checkout.php', checkoutTemplate);
 		// $templateCache.put('review.html', reviewTemplate);
 		// $templateCache.put('main.html', mainTemplate);
 
-		// preload directive template
-		// $templateCache.put('./js/components/edit-order/edit-order.template.html', editOrderTemplate);
+		//preload directive template
+		$templateCache.put('./js/components/footer/footer.template.html', footerTemplate);
 		// $templateCache.put('./js/components/spending-graph/spending-graph.template.html', spendingGraphTemplate);
 		// $templateCache.put('./js/components/add-orders/add-orders.template.html', addOrdersTemplate);
 		// $templateCache.put('./js/components/shops/shops.template.html', shopSearchResultsTemplate);
-	// }]);
+	}]);
 
 	//---------------------------------------------------------
 	//-- constants
@@ -69,11 +70,13 @@
 	//-- directives
 	//---------------------------------------------------------
 	app.factory('ProductModel', ProductModel);
+	app.factory('BagModel', BagModel);
 
 	//---------------------------------------------------------
 	//-- services
 	//---------------------------------------------------------
 	app.service('productService', ['ProductModel', function(ProductModel) { return ProductModel(); }]);
+	app.service('bagService', ['BagModel', function(BagModel) { return BagModel(); }]);
 
 	//---------------------------------------------------------
 	//-- controllers
@@ -89,7 +92,7 @@
 	 * @param
 	 * @return
 	 */
-	// app.directive('yhAddOrders', addOrders);
+	app.directive('hwFooter', footer);
 
 	//---------------------------------------------------------
 	//-- router configuration

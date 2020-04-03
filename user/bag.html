@@ -1,13 +1,20 @@
 <!-- MAIN CARDS -->
 <div class="hw-header d-flex justify-content-center">
 	<div class="ion-ios-arrow-back hw-back" ng-click="onClickBack()"></div>
-	<div>Your Cart</div>
+	<div>Your Bag</div>
 </div>
 
 <div class="hw-page hw-bag-page">
 	<div ng-repeat="i in bag">
 		<div class="d-flex">
-			<div style="height: 60px; width: 50px; background-color: #ccc; margin-right: 10px;"></div>
+			<div style="
+			height: 60px; 
+			width: 50px; 
+			background-color: #ccc; 
+			margin-right: 10px; 
+			background-size: cover; 
+			border-radius: 4px;
+			background-image: url({{ i.imgUrl  }})"></div>
 			<div style="width: 100%;">
 				<div class="d-flex justify-content-between">
 					<div>

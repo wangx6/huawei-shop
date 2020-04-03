@@ -15,11 +15,8 @@
 <body ng-app="huawei-shop">
 	<div>
 		<main ng-view></main>
-		<yh-warning></yh-warning>
-		<yh-comfirmation></yh-comfirmation>
-		<yh-payment-success></yh-payment-success>
-		<yh-spinner></yh-spinner>
-		<yh-copy-clipboard></yh-copy-clipboard>
+		<hw-footer></hw-footer>
+		
 	</div>
 	
 	<input id="rr-session-token" type="hidden" value="<?php echo $_SESSION['token']; ?>"/>
