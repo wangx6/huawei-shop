@@ -37,7 +37,8 @@
     "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "push": "git add . && git commit -m \"dfad\" && git push",
+    "git": "git add . && git commit -m \"commit\"",
+    "postgit": "git push",
     "test": "mocha 'src/**/__test__/**/*.js'",
     "test:watch": "mocha 'src/**/__test__/**/*.js' --watch",
     "dev": "gulp dev-replace && concurrently --kill-others \"webpack --watch\" \"gulp\" \"npm run test:watch\"",
