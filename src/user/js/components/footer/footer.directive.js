@@ -1,10 +1,9 @@
 module.exports = [
 	'$rootScope',
 	'$location',
-	'jQuery',
 	'$window',
 	'$timeout',
-	function(rs, location, $, $window, timeout ) {
+	function(rs, location, $window, timeout ) {
 	
 	var link = function(s, e, a) {
 		

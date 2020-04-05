@@ -16,7 +16,7 @@ $yellow: #fce206;
 $pink: #ff748c;
 $peach: #ec8779;
 $lime: #32CD32;
-$red: #cc0022;
+$red: #cf1930;
 $blue: #003F87;
 $orange: #e95532;
 
@@ -26,7 +26,7 @@ $green: #65b143;
 
 
 $logo-font: 'Montserrat', sans-serif;
-$main-color: $orange;
+$main-color: $red;
 
 $black: #333;
 
@@ -42,12 +42,13 @@ html {
   font-size: 13px;
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
+  // filter: grayscale(100%);
 }
 
 body {
   overflow-x: hidden;
+  padding-bottom: 100px;
 }
-
 
 div {
   background-color: transparent;

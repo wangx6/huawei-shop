@@ -141,7 +141,6 @@ module.exports = [
 				]
 			};
 
-
 			const getProducts = () => data.products;
 
 			const findById = (id) => {
@@ -155,7 +154,6 @@ module.exports = [
 				getProducts,
 				findById,
 			};
-			
 		}
 
 		return ProductModel;

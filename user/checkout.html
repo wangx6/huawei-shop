@@ -8,30 +8,28 @@
 	<form>
 		<div>
 			<div>Card number</div>
-			<input class="hw-input" type="" name="">
+			<input class="hw-input" type="" name="" ng-model="data.cardNum">
 		</div>
 
 		<div>
 			<div>Expiry date</div>
-			<div class="d-flex">
-				<input class="hw-input" type="" name="">
-				<input class="hw-input" type="" name="">
+			<div class="d-flex align-items-center">
+				<input class="hw-input" type="" name="" placeholder="month">
+				<div class="hw-input">/</div>
+				<input class="hw-input" type="" name="" placeholder="year">
 			</div>
 		</div>
 
-		<div class="d-flex justify-content-between">
+		<div >
 			<div>
 				<div>CVC</div>
 				<div><input class="hw-input" type="" name=""></div>
 			</div>
-			<div>
-				<div>ZIP code</div>
-				<div><input class="hw-input" type="" name=""></div>
-			</div>
+			
 		</div>
 	</form>
 	<div>
-		<div class="hw-btn hw-checkout-pay-btn">Pay €999</div>
+		<div ng-click="onClickPay()" class="hw-btn hw-checkout-pay-btn">Pay €999</div>
 	</div>
 
 </div>

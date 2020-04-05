@@ -15,6 +15,4 @@ function(location, timeout, s, rs, $controller, win, productService, bagService)
 		bagService.add(item);
 		location.path('/product-detail').search({id: item.id});
 	}
-
-	
 }];

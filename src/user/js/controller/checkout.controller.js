@@ -7,19 +7,24 @@ module.exports = [
 	'$window',
 	'productService',
 	'$routeParams',
-function(location, timeout, s, rs, $controller, win, productService, $routeParams) {
+	'purchaseService',
+function(location, timeout, s, rs, $controller, win, productService, $routeParams, purchaseService) {
 	timeout(function() { win.scrollTo(0, 0);}, 1000);
-	
-	s.productService = productService;
 
+	console.log(purchaseService);
+
+	s.productService = productService;
+	s.data = Object.assign({}, purchaseService.getData());
+	console.log(s.data);
 
 	s.onClickBack = () => {
 		location.path('/product-detail');
 	}
 
 	s.onClickPay = () => {
-		console.log('pay now....');
+		console.log(s.data);
+		purchaseService.setData(Object.assign({}, s.data));
+		purchaseService.pay();
 	}
-
 
 }];
