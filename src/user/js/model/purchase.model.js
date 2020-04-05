@@ -16,6 +16,7 @@ module.exports = [
 				}
 			};
 
+
 			/**
 			 * comment
 			 */
@@ -47,7 +48,6 @@ module.exports = [
 			 * comment
 			 */
 			const checkCardNumber = (n) => {
-				console.log(n);
 				if(numOnly(n))
 					return  { ok: false, error: 'numbers only' }
 				if(n.length !== 16) 
