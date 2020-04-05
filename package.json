@@ -37,7 +37,7 @@
     "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "git": "git add . && git commit -m \"commit\"",
+    "git": "git add . && git commit -m",
     "postgit": "git push",
     "test": "mocha 'src/**/__test__/**/*.js'",
     "test:watch": "mocha 'src/**/__test__/**/*.js' --watch",
