@@ -2,6 +2,9 @@
 	<div class="d-flex justify-content-between">
 		<div ng-click="onClickShop()">Shop</div>
 		<div ng-click="onClickShop()">Search</div>
-		<div ng-click="onClickBag()">Bag</div>
+		<div class="hw-footer-bag" ng-click="onClickBag()" ng-class="{'hw-disabled-color': bagService.isEmpty()}">
+			<div>Bag</div>
+			<button class="hw-footer-bag-num" ng-class="{'hw-disabled-bgcolor': bagService.isEmpty()}">{{ bagService.getNumOfItem() }}</button>
+		</div>
 	</div>
 </div>

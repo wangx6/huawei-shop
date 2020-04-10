@@ -3,18 +3,22 @@ module.exports = [
 	'$location',
 	'$window',
 	'$timeout',
-	function(rs, location, $window, timeout ) {
+	'bagService',
+	function(rs, location, $window, timeout, bagService ) {
 	
 	var link = function(s, e, a) {
+
+		s.bagService = bagService;
 		
 		s.onClickShop = () => {
 			location.path('/product').search({});
 		}
 
 		s.onClickBag = () => {
-			location.path('/bag');
+			if(!bagService.isEmpty()) {
+				location.path('/bag');
+			}
 		}
-		
 	};
 
 	return {

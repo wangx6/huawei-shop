@@ -1,0 +1,30 @@
+<!-- MAIN CARDS -->
+<div class="hw-header d-flex justify-content-center">
+	<div class="ion-ios-arrow-back hw-back" ng-click="onClickBack()"></div>
+	<div>Delivery address</div>
+</div>
+
+<div class="hw-page hw-product-detail-page">
+
+	<form>
+
+		<div ng-repeat="(key, d) in addr.data">
+			<div style="text-transform: capitalize;">
+				<span>{{d.label}}</span>
+				<span ng-if="d.required">*</span>
+				<span style="color: red;">{{ d.error[0].error }}</span>
+			</div>
+			<div><input class="hw-input" ng-class="{'hw-input-err': d.error.length > 0}" type="" name="" ng-model="d.val"></div>
+		</div>		
+		
+	</form>
+	<div class="d-flex justify-content-center">
+		<div class="hw-btn hw-btn-large" ng-click="onClickContinue()">Continue to checkout</div>
+	</div>
+</div>
+
+
+
+
+
+

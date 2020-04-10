@@ -1,0 +1,65 @@
+.hw-spinner{
+	$dimention: 30px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 2000;
+	.hw-spinner-circle{
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width : $dimention;
+		height:  $dimention;
+		margin-left: -$dimention / 2;
+		margin-top: -60px;
+		border-radius: $dimention / 2;
+		border: 2px solid $main-color;
+		border-color: $main-color $main-color $main-color transparent;
+		animation: lds-dual-ring 1.2s linear infinite;
+	}
+	.hw-spinner-inner-circle {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width :$dimention - 10;
+		height: $dimention - 10;
+		margin-left: -($dimention - 10) / 2;
+		margin-top: -55px;
+		border-radius: ($dimention - 10) / 2;
+		border: 2px solid $main-color;
+		border-color: $main-color $main-color $main-color transparent;
+		animation: lds-dual-ring-inner 1s linear infinite;
+	}
+}
+
+.hw-spinner.ng-hide {
+  opacity: 0;
+}
+
+.hw-spinner.ng-hide-add,
+.hw-spinner.ng-hide-remove {
+  transition: all linear 0.1s;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring-inner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

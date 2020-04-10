@@ -5,8 +5,11 @@
 </div>
 
 <div class="hw-page hw-bag-page">
-	<div ng-repeat="i in bag">
-		<div class="d-flex">
+	<dir ng-if="bagService.isEmpty()">No Items in the bag!</dir>
+
+	<!-- display section -->
+	<div ng-repeat="i in bagService.bag.data track by $index" class="hw-bag-item">
+		<div class="d-flex hw-gap-bottom-20">
 			<div style="
 			height: 60px; 
 			width: 50px; 
@@ -25,27 +28,43 @@
 						€{{ i.rrp }}
 					</div>
 				</div>
-				<div>
-					Order today, delivers
+				<div ng-repeat="(k, v) in i.selectedSpec">{{ v }}</div>
+				<div class="d-flex justify-content-end">
+					<div ng-click="onClickRemove(i.id)">Remove</div>
 				</div>
-				
 			</div>
 		</div>
+	</div>
 
-		<div style="margin-top: 20px; padding: 10px 10px; background-color: #f6f6f6;">
+	<!-- subtotla info section -->
+	<div style="margin-top: 20px; padding: 10px 10px; background-color: #f6f6f6;">
+		<div class="d-flex justify-content-between hw-strong">
 			<div>
-				Cart subtotal
+				Subtotal: 
 			</div>
 			<div>
-				Includes VAT of
+				€{{bagService.bag.subtotal}} 
 			</div>
-			<div style="color: #aaa;">Shipping is FREE.</div>
+		</div>
+		<div>
+			Includes VAT of
+		</div>
+		<div style="color: #aaa;">Shipping is FREE.</div>
+	</div>
+
+	<!-- button section -->
+	<div>
+		<div class="hw-btn hw-btn-large" ng-click="onClickContinueShopping()" style="margin-top: 20px;">
+			<span class="ion-ios-arrow-back"></span> continue shopping
 		</div>
 
-		<div class="hw-btn" ng-click="onClickPay()" style="margin-top: 20px; font-size: 1rem; padding: 15px 0; width:100%;">
-			Buy with Huawei pay
+		<div 
+			class="hw-btn hw-btn-large" 
+			ng-click="onClickPay()" 
+			ng-class="{'hw-btn-disabled': bagService.isEmpty()}"
+			style="margin-top: 20px;">
+			Buy with Huawei pay <span class="ion-ios-arrow-forward"></span>
 		</div>
-
 	</div>
 </div>
 

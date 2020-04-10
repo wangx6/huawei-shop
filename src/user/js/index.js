@@ -10,17 +10,20 @@
 	// -- app dependencies
 	//---------------------------------------------------------
 	const util = require('./service/util.service');
+	const validator = require('./service/validator.service');
 	//---------------------------------------------------------
 	// -- app model
 	//-------------	--------------------------------------------
 	const ProductModel = require('./model/product.model');
 	const BagModel = require('./model/bag.model');
 	const PurchaseModel = require('./model/purchase.model');
+	const AddressModel = require('./model/address.model');
 	
 	//---------------------------------------------------------
 	// -- DIRECTIVES
 	//---------------------------------------------------------
 	const footer = require('./components/footer/footer.directive');
+	const spinner = require('./components/spinner/spinner.directive');
 
 	//---------------------------------------------------------
 	// -- CONTROLLER
@@ -29,6 +32,7 @@
 	const productDetailController = require('./controller/product-detail.controller');
 	const bagController = require('./controller/bag.controller');
 	const checkoutController = require('./controller/checkout.controller');
+	const deliveryAddressController = require('./controller/delivery-address.controller');
 	
 	//---------------------------------------------------------
 	// -- TEMPLATE
@@ -57,6 +61,7 @@
 	app.factory('ProductModel', ProductModel);
 	app.factory('BagModel', BagModel);
 	app.factory('PurchaseModel', PurchaseModel);
+	app.factory('AddressModel', AddressModel);
 
 	//---------------------------------------------------------
 	//-- services
@@ -64,6 +69,8 @@
 	app.service('productService', ['ProductModel', function(ProductModel) { return ProductModel(); }]);
 	app.service('bagService', ['BagModel', function(BagModel) { return BagModel(); }]);
 	app.service('purchaseService', ['PurchaseModel', function(PurchaseModel) { return PurchaseModel(); }]);
+	app.service('addressService', ['AddressModel', function(AddressModel) { return AddressModel(); }]);
+	app.service('validatorService', validator);
 
 	//---------------------------------------------------------
 	//-- controllers
@@ -72,6 +79,7 @@
 	app.controller('productDetailController', productDetailController);
 	app.controller('bagController', bagController);
 	app.controller('checkoutController', checkoutController);
+	app.controller('deliveryAddressController', deliveryAddressController);
 
 	/**
 	 * 
@@ -79,6 +87,7 @@
 	 * @return
 	 */
 	app.directive('hwFooter', footer);
+	app.directive('hwSpinner', spinner);
 
 	//---------------------------------------------------------
 	//-- router configuration
@@ -90,6 +99,7 @@
 	    	.when('/product-detail', {templateUrl : 'product-detail.html', controller:'productDetailController'})
 	    	.when('/bag', {templateUrl : 'bag.html', controller: 'bagController'})
 	    	.when('/checkout', {templateUrl : 'checkout.html', controller: 'checkoutController'})
+	    	.when('/delivery-address', {templateUrl : 'delivery-address.html', controller: 'deliveryAddressController'})
 	    }
 	]);
 })();

@@ -8,23 +8,30 @@ module.exports = [
 	'productService',
 	'$routeParams',
 	'purchaseService',
-function(location, timeout, s, rs, $controller, win, productService, $routeParams, purchaseService) {
+	'bagService',
+function(location, timeout, s, rootScope, $controller, win, productService, $routeParams, purchaseService, bagService) {
+	// move page to top
 	timeout(function() { win.scrollTo(0, 0);}, 1000);
 
-	console.log(purchaseService);
-
+	// binding
 	s.productService = productService;
 	s.data = Object.assign({}, purchaseService.getData());
-	console.log(s.data);
 
+	// events
 	s.onClickBack = () => {
-		location.path('/product-detail');
+		location.path('/delivery-address');
 	}
 
 	s.onClickPay = () => {
-		console.log(s.data);
-		purchaseService.setData(Object.assign({}, s.data));
-		purchaseService.pay();
+		rootScope.$broadcast('spinner.show');
+		timeout(() => {
+			rootScope.$broadcast('spinner.hide');
+			console.log(s.data);
+			purchaseService.pay();
+			console.log('payment complete');
+			bagService.reset();
+			console.log(bagService.getData());
+			location.path('/product');
+		}, 2000);
 	}
-
 }];

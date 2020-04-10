@@ -66,7 +66,22 @@ div {
       font-size: 2rem;
     }
 }
+.hw-h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
+.hw-h3{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hw-disabled-color{
+  color: #ccc;
+}
+.hw-disabled-bgcolor{
+  background-color: #ddd !important;
+}
 .hw-gap-right-20 {
   margin-right: 20px;
 }
@@ -79,6 +94,12 @@ div {
 
 .hw-gap-top-5 {
   margin-top: 5px;
+}
+.hw-gap-top-20 {
+  margin-top: 20px;
+}
+.hw-gap-bottom-20 {
+  margin-bottom: 20px;
 }
 .hw-orders-float-add, .hw-float-top{
     position: fixed;
@@ -138,6 +159,11 @@ main.ng-enter {
   opacity: 0;
 }
 
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
 .hw-shadow {
   box-shadow: 0px 1px 2px #ccc;
 }
@@ -164,6 +190,10 @@ main.ng-enter {
   font-size: 1rem;
   border-bottom: 1px solid #ccc;
   padding: 10px;
+  &.hw-input-err {
+    border-bottom: 2px solid $red;
+    color: $red;
+  }
 }
 
 .hw-input:focus {
@@ -172,10 +202,7 @@ main.ng-enter {
 
 
 
-/* The finishing CSS styles for the enter animation */
-main.ng-enter.ng-enter-active {
-  opacity: 1;
-}
+
 
 
 .hw-blink {
@@ -376,7 +403,7 @@ button:focus {
   border-radius: 10px;
   // box-shadow: 0 10px 8px -8px black;
   color: #fff;
-  padding: 6px 5px;
+  padding: 6px 15px;
   font-weight: bold;
   text-align: center;
   display: inline-block;
@@ -384,6 +411,12 @@ button:focus {
   font-size: 0.8rem;
   border-radius: 4px;
   text-transform: uppercase;
+
+    &.hw-btn-large {
+      padding: 10px;
+      font-size: 1rem;
+      width :100%;
+    }  
 
   &.hw-blue {
     background-color: #fff;
@@ -411,6 +444,11 @@ button:focus {
   &.hw-btn-cancle {
     background: #ccc;
     color: $black;
+  }
+
+  &.hw-btn-disabled {
+    background-color: #ccc;
+    color: #555;
   }
 
   &.hw-no-shadow {

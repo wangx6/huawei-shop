@@ -26,10 +26,10 @@ module.exports = [
 						],
 						colorOptions: [
 							{
-								color: 'Black',
+								val: 'Black',
 							}, 
 							{
-								color: 'Silver'
+								val: 'Silver'
 							},						
 						],
 						images: [],
@@ -51,7 +51,7 @@ module.exports = [
 							'Rear camera: 50MP Ultra Vision  + 16MP Ultra-Wide Angle Camera + 8MP Telephoto Camera',
 							'Front camera: 32MP Selfie Camera ',
 						],
-						colorOptions: [{color:'Black'}, {color:'Silver'}],
+						colorOptions: [{val:'Black'}, {val:'Silver'}],
 						images: [],
 					},
 					{
@@ -71,7 +71,7 @@ module.exports = [
 							'Rear Camera：48 MP AI Ultra-wide Quad Camera',
 							'Front Camera：16MP Single-lens Camera"',
 						],
-						colorOptions: [{color: 'Black'}],
+						colorOptions: [{val: 'Black'}],
 						images: [],
 					},
 					{
@@ -89,7 +89,7 @@ module.exports = [
 							'Bluetooth version:Bluetooth 5.1',
 							'Main Feature:1)A true wireless stereo earphone;2)Noise reduction;3) Wireless charging (charging case);4)Low power consumption, long battery life',
 						],
-						colorOptions: [{color: 'Black'}, {color: 'White'}],
+						colorOptions: [{val: 'Black'}, {val: 'White'}],
 						images: [],
 					},
 					{
@@ -112,7 +112,7 @@ module.exports = [
 							'TruSeen3.0 Provides Better Heart Rate Monitoring Experience',
 							'5ATM Water resistant',
 						],
-						colorOptions: [{color: 'Black', ref: 'Silicon strap'}, {color: 'Silver', ref: 'Silver strap'}],
+						colorOptions: [{val: 'Black', ref: 'Silicon strap'}, {val: 'Silver', ref: 'Silver strap'}],
 						images: [''],
 					},
 					{
@@ -135,7 +135,7 @@ module.exports = [
 							'TruSeen3.0 Provides Better Heart Rate Monitoring Experience',
 							'5ATM Water resistant',
 						],
-						colorOptions: [{color: 'Black'}, {color: 'White'}],
+						colorOptions: [{val: 'Black'}, {val: 'White'}],
 						images: [],
 					}
 				]
@@ -144,7 +144,7 @@ module.exports = [
 			const getProducts = () => data.products;
 
 			const findById = (id) => {
-				for(let i = 0; i < data.products.length; i ++) {
+				for(let i = 0; i < data.products.length; i += 1) {
 					if(data.products[i].id == id) return Object.assign({}, data.products[i]);
 				}
 				return null;

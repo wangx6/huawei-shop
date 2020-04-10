@@ -1,6 +1,6 @@
 .hw-footer{
 	border-top: 1px solid #eee;
-	padding: 15px 20px 8px 20px;
+	padding: 20px 30px 15px 30px;
 	background-color: #fff;
 	position: fixed;
 	color: $black;
@@ -16,12 +16,11 @@
 
 	.hw-footer-all,
 	.hw-footer-pending,
-	.hw-footer-otw {
+	.hw-footer-bag {
 		position: relative;
 	}
-	.hw-footer-all-num,
-	.hw-footer-pending-num,
-	.hw-footer-otw-num,
+	
+	.hw-footer-bag-num,
 	 {
 		position: absolute;
 		top: -10px;
@@ -34,5 +33,7 @@
 		min-width: 20px;
 		border-radius: 10px;
 		color: #fff;
+		text-align: center;
 	}
+	
 }

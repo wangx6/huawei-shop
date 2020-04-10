@@ -7,6 +7,11 @@
 <div class="hw-page hw-checkout-page">
 	<form>
 		<div>
+			<div>Card name</div>
+			<input class="hw-input" type="" name="" ng-model="data.cardName">
+		</div>
+		
+		<div>
 			<div>Card number</div>
 			<input class="hw-input" type="" name="" ng-model="data.cardNum">
 		</div>
@@ -14,19 +19,21 @@
 		<div>
 			<div>Expiry date</div>
 			<div class="d-flex align-items-center">
-				<input class="hw-input" type="" name="" placeholder="month">
+				<input class="hw-input" type="" name="" placeholder="month" ng-model="data.expiryDate.month">
 				<div class="hw-input">/</div>
-				<input class="hw-input" type="" name="" placeholder="year">
+				<input class="hw-input" type="" name="" placeholder="year" ng-model="data.expiryDate.year">
 			</div>
 		</div>
 
 		<div >
 			<div>
 				<div>CVC</div>
-				<div><input class="hw-input" type="" name=""></div>
+				<div><input class="hw-input" type="" name="" ng-model="data.cvc"></div>
 			</div>
 			
 		</div>
+
+	
 	</form>
 	<div>
 		<div ng-click="onClickPay()" class="hw-btn hw-checkout-pay-btn">Pay €999</div>

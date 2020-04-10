@@ -5,31 +5,40 @@ module.exports = [
 	'$rootScope',
 	'$controller',
 	'$window',
-	'productService',
 	'$routeParams',
-function(location, timeout, s, rs, $controller, win, productService, $routeParams) {
-	timeout(function() { win.scrollTo(0, 0);}, 1000);
-	
-	s.productService = productService;
+	'bagService',
+function(location, timeout, s, rs, $controller, win, $routeParams, bagService) {
 
-	let id = null;
-	let color = null;
-	s.bag = [];
+	if(!bagService.isEmpty()) {
+		timeout(function() { win.scrollTo(0, 0);}, 1000);
+		
+		s.bagService = bagService;
+		console.log(bagService);
 
-	const init = () => {
-		id = $routeParams.id;
-		pcolor = $routeParams.color;
-		let { colorOptions, ...rest } = productService.findById(id)
-		s.bag.push(Object.assign({}, {color: pcolor, ...rest}));
+		const init = () => {
+			
+		}
+
+		s.onClickRemove = (id) => {
+			bagService.remove(id);
+		}
+
+		s.onClickBack = () => {
+			location.path('/product-detail');
+		}
+
+		s.onClickContinueShopping = () => {
+			location.path('/product');
+		}
+
+		s.onClickPay = () => {
+			if(!bagService.isEmpty()) {
+				location.path('/delivery-address')
+			}
+		}
+
+		init();
+	} else {
+		location.path('/product');
 	}
-
-	s.onClickBack = () => {
-		location.path('/product-detail');
-	}
-
-	s.onClickPay = () => {
-		location.path('/checkout')
-	}
-
-	init();
 }];
