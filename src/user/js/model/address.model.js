@@ -1,9 +1,10 @@
 module.exports = [
 	'$q',
 	'$http',
+	'$location',
 	'token',
 	'validatorService',
-	function($q, $http, token, validatorService) {
+	function($q, $http, location, token, validatorService) {
 		function AddressModel() {
 			const data = {
 				line1: { 
@@ -72,6 +73,10 @@ module.exports = [
 				},
 			};
 
+			const getAddressDisplay = () => {
+				return Object.keys(data).map(key => data[key].val).join(', ');
+			}
+
 			const validate = () => {
 				const rs = { ok: false };
 				let collection = [];
@@ -85,6 +90,7 @@ module.exports = [
 			return {
 				data, 
 				validate,
+				getAddressDisplay,
 			}
 		}
 

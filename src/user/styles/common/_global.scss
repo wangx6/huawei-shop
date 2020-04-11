@@ -163,6 +163,47 @@ main.ng-enter {
 main.ng-enter.ng-enter-active {
   opacity: 1;
 }
+.hw-main-color{
+  color: $main-color !important;
+}
+.hw-underline {
+  text-decoration: underline !important;
+}
+.hw-line-throuth {
+  text-decoration: line-through;
+}
+
+// font size
+$xx-large: 1.6rem;
+$x-large: 1.4rem;
+$large: 1.2rem;
+$regular: 1rem;
+$small: 0.8rem;
+$x-small: 0.6rem;
+.hw-small-text {
+  font-size: $small;
+}
+
+.hw-fade-in.ng-enter {
+  transition: 0.2s linear all;
+  opacity: 0;
+}
+.hw-capitalize{
+  text-transform: capitalize !important;
+}
+
+/* The finishing CSS styles for the enter animation */
+.hw-fade-in.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.hw-fade-out.ng-leave {
+  transition:0.2s linear all;
+  opacity:1;
+}
+.hw-fade-out.ng-leave.ng-leave-active {
+  opacity:0;
+}
 
 .hw-shadow {
   box-shadow: 0px 1px 2px #ccc;

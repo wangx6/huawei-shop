@@ -5,10 +5,10 @@
 </div>
 
 <div class="hw-page hw-bag-page">
-	<dir ng-if="bagService.isEmpty()">No Items in the bag!</dir>
+	<div ng-if="bagService.isEmpty()">No Items in the bag!</div>
 
 	<!-- display section -->
-	<div ng-repeat="i in bagService.bag.data track by $index" class="hw-bag-item">
+	<div ng-repeat="i in bagService.bag.data track by $index" class="hw-bag-item hw-fade-in hw-fade-out">
 		<div class="d-flex hw-gap-bottom-20">
 			<div style="
 			height: 60px; 
@@ -30,7 +30,7 @@
 				</div>
 				<div ng-repeat="(k, v) in i.selectedSpec">{{ v }}</div>
 				<div class="d-flex justify-content-end">
-					<div ng-click="onClickRemove(i.id)">Remove</div>
+					<div ng-click="onClickRemove(i.id)" class="hw-main-color hw-small-text">Remove</div>
 				</div>
 			</div>
 		</div>

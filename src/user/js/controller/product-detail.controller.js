@@ -44,8 +44,6 @@ function(location, timeout, s, rootScope, $controller, win, productService, $rou
 	const init = () => {
 		id = $routeParams.id;
 		s.data = angular.copy(productService.findById(id));
-		console.log(id);
-		console.log(s.data);
 	}
 
 	/**
@@ -77,14 +75,11 @@ function(location, timeout, s, rootScope, $controller, win, productService, $rou
 						s.data, 
 						{selectedSpec: selectionService.getData()}
 					)));
-					console.log(bagService.getData());
 					rootScope.$broadcast('spinner.hide');
-				}, 500);
+				}, 300);
 			} else {
-				console.log(selectionService.validate());
+				console.log('Please select a color.');
 			}
-		// console.log('add item to bag');
-		// bagService.add();
 	}
 
 	init();
