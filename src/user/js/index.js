@@ -18,12 +18,14 @@
 	const BagModel = require('./model/bag.model');
 	const PurchaseModel = require('./model/purchase.model');
 	const AddressModel = require('./model/address.model');
+	const CheckoutFormModel = require('./model/checkout-form.model');
 	
 	//---------------------------------------------------------
 	// -- DIRECTIVES
 	//---------------------------------------------------------
 	const footer = require('./components/footer/footer.directive');
 	const spinner = require('./components/spinner/spinner.directive');
+	const numOnlyInput = require('./components/num-only-input/num-only-input.directive');
 
 	//---------------------------------------------------------
 	// -- CONTROLLER
@@ -62,6 +64,7 @@
 	app.factory('BagModel', BagModel);
 	app.factory('PurchaseModel', PurchaseModel);
 	app.factory('AddressModel', AddressModel);
+	app.factory('CheckoutFormModel', CheckoutFormModel);
 
 	//---------------------------------------------------------
 	//-- services
@@ -70,6 +73,7 @@
 	app.service('bagService', ['BagModel', function(BagModel) { return BagModel(); }]);
 	app.service('purchaseService', ['PurchaseModel', function(PurchaseModel) { return PurchaseModel(); }]);
 	app.service('addressService', ['AddressModel', function(AddressModel) { return AddressModel(); }]);
+	app.service('checkoutFormService', ['CheckoutFormModel', function(CheckoutFormModel) { return CheckoutFormModel(); }]);
 	app.service('validatorService', validator);
 
 	//---------------------------------------------------------
@@ -88,6 +92,7 @@
 	 */
 	app.directive('hwFooter', footer);
 	app.directive('hwSpinner', spinner);
+	app.directive('hwNumOnlyInput', numOnlyInput);
 
 	//---------------------------------------------------------
 	//-- router configuration

@@ -24,6 +24,22 @@ module.exports = [function() {
 		/**
 		 * 
 		 */
+		requiredLen: function(len) {
+			if(this.cache.length !== len)
+			this.error.push({ error: `length must be ${len}` });
+			return this;
+		},
+
+		/**
+		 * 
+		 */
+		run: function() {
+			return this.error;
+		},
+
+		/**
+		 * 
+		 */
 		getErr: function() { 
 			return this.error; 
 		},
@@ -32,7 +48,7 @@ module.exports = [function() {
 		 * 
 		 */
 		numOnly: function() {  
-			if(!/\D/.test(this.cache)) 
+			if(/\D/.test(this.cache)) 
 				this.error.push({ error: `number only` });
 			return this;
 		},
@@ -67,7 +83,7 @@ module.exports = [function() {
 		/**
 		 * 
 		 */
-		min: function () {
+		min: function (num) {
 			if(this.cache.length < num) 
 				this.error.push({ error: `no less than ${num}` });
 			return this;

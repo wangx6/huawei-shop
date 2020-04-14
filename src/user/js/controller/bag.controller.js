@@ -13,7 +13,6 @@ function(location, timeout, s, rs, $controller, win, $routeParams, bagService) {
 		timeout(function() { win.scrollTo(0, 0);}, 1000);
 		
 		s.bagService = bagService;
-		console.log(bagService);
 
 		const init = () => {
 			

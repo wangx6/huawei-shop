@@ -7,21 +7,51 @@
 <div class="hw-page hw-checkout-page">
 	<form>
 		<div>
-			<div>Card name</div>
-			<input maxlength="50" class="hw-input" type="" name="" ng-model="data.cardName">
+			<div>
+				Card name
+			</div>
+			<input maxlength="50" class="hw-input" type="text" name="" ng-model="data.cardName.val">
+		</div>
+		<div>
+			<span class="hw-error-mes" ng-show="data.cardName.error.length">Invalid name.</span>
 		</div>
 		
 		<div>
 			<div>Card number</div>
-			<input maxlength="16" class="hw-input" type="" name="" ng-model="data.cardNum">
+			<input 
+				hw-num-only-input
+				maxlength="16" 
+				class="hw-input" 
+				type="text" 
+				name="" 
+				ng-model="data.cardNum.val">
 		</div>
+		<span class="hw-error-mes" ng-show="data.cardNum.error.length">Invalid card number.</span>
 
 		<div>
-			<div>Expiry date</div>
+			<div>
+				Expiry date
+			</div>
 			<div class="d-flex align-items-center">
-				<input maxlength="2" class="hw-input" type="" name="" placeholder="month" ng-model="data.expiryDate.month">
+				<div>
+					<input
+						hw-num-only-input
+						maxlength="2" 
+						class="hw-input" 
+						type="text" name="" placeholder="month" ng-model="data.expiryMonth.val">
+				</div>
 				<div class="hw-input">/</div>
-				<input maxlength="2" class="hw-input" type="" name="" placeholder="year" ng-model="data.expiryDate.year">
+				<div>
+					<input 
+						hw-num-only-input
+						maxlength="2" 
+						class="hw-input" 
+						type="text" name="" placeholder="year" ng-model="data.expiryYear.val">
+				</div>
+			</div>
+			<div>
+				<span class="hw-error-mes" ng-show="data.expiryMonth.error.length">Invalid month.</span>
+				<span class="hw-error-mes" ng-show="data.expiryYear.error.length">Invalid year.</span>
 			</div>
 		</div>
 
@@ -29,8 +59,12 @@
 			<div>
 				<div>CVC</div>
 				<div>
-					<input maxlength="3" class="hw-input" type="" name="" ng-model="data.cvc">
+					<input 
+						hw-num-only-input
+						maxlength="3" 
+						class="hw-input" type="text" name="" ng-model="data.cvc.val">
 				</div>
+				<span class="hw-error-mes" ng-show="data.cvc.error.length">Invalid.</span>
 			</div>
 			
 		</div>
