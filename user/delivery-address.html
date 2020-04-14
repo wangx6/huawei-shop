@@ -8,13 +8,13 @@
 
 	<form>
 
-		<div ng-repeat="(key, d) in addr.data">
+		<div class="hw-gap-bottom-20" ng-repeat="(key, d) in addr.data">
 			<div style="text-transform: capitalize;">
 				<span>{{d.label}}</span>
 				<span ng-if="d.required">*</span>
-				<span style="color: red;">{{ d.error[0].error }}</span>
 			</div>
 			<div><input class="hw-input" ng-class="{'hw-input-err': d.error.length > 0}" type="" name="" ng-model="d.val"></div>
+			<span class="hw-error-mes">{{ d.error[0].error }}</span>
 		</div>		
 		
 	</form>

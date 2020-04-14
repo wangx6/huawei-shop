@@ -26,7 +26,16 @@ module.exports = [function() {
 		 */
 		requiredLen: function(len) {
 			if(this.cache.length !== len)
-			this.error.push({ error: `length must be ${len}` });
+				this.error.push({ error: `length must be ${len}` });
+			return this;
+		},
+
+		/**
+		 * 
+		 */
+		range: function(min, max) {
+			if(parseInt(this.cache) < min || parseInt(this.cache) > max)
+				this.error.push({ error: `only between "${min}"" and "${max}"` });
 			return this;
 		},
 
@@ -40,14 +49,14 @@ module.exports = [function() {
 		/**
 		 * 
 		 */
-		getErr: function() { 
+		getErr: function() {
 			return this.error; 
 		},
 
 		/**
 		 * 
 		 */
-		numOnly: function() {  
+		numOnly: function() {
 			if(/\D/.test(this.cache)) 
 				this.error.push({ error: `number only` });
 			return this;
@@ -56,7 +65,7 @@ module.exports = [function() {
 		/**
 		 * 
 		 */
-		humanName: function() { 
+		humanName: function() {
 			if(!/^[a-z A-Z]+'?[a-z A-Z]+$/.test(this.cache)) 
 				this.error.push({ error: `invalid name` });
 			return this;

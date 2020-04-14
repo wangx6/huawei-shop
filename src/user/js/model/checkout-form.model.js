@@ -19,14 +19,14 @@ module.exports = ['validatorService', function(validatorService) {
 				val: '',
 				error: [],
 				validate: function() {
-					return this.error = [...validatorService.data(this.val).numOnly().requiredLen(2).run()];
+					return this.error = [...validatorService.data(this.val).numOnly().range(1, 12).requiredLen(2).run()];
 				},
 			},
 			expiryYear: {
 				val: '',
 				error: [],
 				validate: function() {
-					return this.error = [...validatorService.data(this.val).numOnly().requiredLen(2).run()];
+					return this.error = [...validatorService.data(this.val).numOnly().range(21, 30).requiredLen(2).run()];
 				},
 			},
 			cvc: {

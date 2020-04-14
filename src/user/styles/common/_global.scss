@@ -441,14 +441,7 @@ button:focus {
   margin-left: 10px;
 }
 
-.hw-btn-outline{
-  padding: 6px 10px;
-  min-width: 120px;
-  text-align: center;
-  border-radius: 13px;
-  border: 1px solid $black;
-  display: inline-block;
-}
+
 .hw-btn {
   border: 0px solid $yellow;
   background-color: $main-color;
@@ -464,11 +457,11 @@ button:focus {
   border-radius: 4px;
   text-transform: uppercase;
 
-    &.hw-btn-large {
-      padding: 10px;
-      font-size: 1rem;
-      width :100%;
-    }  
+  &.hw-btn-large {
+    padding: 10px;
+    font-size: 1rem;
+    width :100%;
+  }  
 
   &.hw-blue {
     background-color: #fff;
@@ -507,7 +500,12 @@ button:focus {
     box-shadow: none;
   }
 }
-
+.hw-btn-outline{
+  @extend .hw-btn;
+  border: 1px solid $main-color;
+  background-color: #fff;
+  color: #333;
+}
 .hw-no-select {
   -webkit-touch-callout: none;
   /* iOS Safari */

@@ -1,0 +1,85 @@
+.hw-payment-success{
+	position: fixed;
+	width :100%;
+	height: 100%;
+	background-color: rgba(255,255,255, 1);
+	top: 0;
+	left: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 4000;
+}
+.hw-payment-success-c{
+	position:fixed;
+	top: 40%;
+	width: 100%;
+	transform: translateY(-50%);
+	z-index: 4001;
+}
+.hw-payment-success-w{
+	@include flexbox;
+	@include align-items(center);
+	@include flex-direction(column);
+
+}
+.hw-payment-success-links{
+  margin-bottom: 10px;
+  text-align: center;
+}
+.hw-payment-success-keep-shopping-link{
+	font-size: 1rem;
+	margin-top: 100px;
+  text-align: center;
+}
+.hw-payment-success-message{
+	margin-top: 50px;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}

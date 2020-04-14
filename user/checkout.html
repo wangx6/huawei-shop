@@ -6,67 +6,66 @@
 
 <div class="hw-page hw-checkout-page">
 	<form>
-		<div>
+		<div class="hw-gap-bottom-20">
+			<!-- <div>Card name</div> -->
+			<input placeholder="Card name" maxlength="50" class="hw-input" type="text" name="" ng-model="data.cardName.val">
 			<div>
-				Card name
+				<span class="hw-error-mes" ng-show="data.cardName.error.length">Invalid name.</span>
 			</div>
-			<input maxlength="50" class="hw-input" type="text" name="" ng-model="data.cardName.val">
-		</div>
-		<div>
-			<span class="hw-error-mes" ng-show="data.cardName.error.length">Invalid name.</span>
 		</div>
 		
-		<div>
-			<div>Card number</div>
+		<div class="hw-gap-bottom-20">
+			<!-- <div>Card number</div> -->
 			<input 
+				placeholder="Card number" 
 				hw-num-only-input
 				maxlength="16" 
 				class="hw-input" 
 				type="text" 
 				name="" 
 				ng-model="data.cardNum.val">
-		</div>
-		<span class="hw-error-mes" ng-show="data.cardNum.error.length">Invalid card number.</span>
-
-		<div>
 			<div>
-				Expiry date
+				<span class="hw-error-mes" ng-show="data.cardNum.error.length">Invalid card number.</span>
 			</div>
+		</div>
+
+		<div class="hw-gap-bottom-20">
+			<!-- <div>Expiry date</div> -->
 			<div class="d-flex align-items-center">
 				<div>
 					<input
+						placeholder="Month"
 						hw-num-only-input
 						maxlength="2" 
 						class="hw-input" 
 						type="text" name="" placeholder="month" ng-model="data.expiryMonth.val">
+					<span class="hw-error-mes" ng-show="data.expiryMonth.error.length">Invalid month.</span>
 				</div>
-				<div class="hw-input">/</div>
+				<div >/</div>
 				<div>
 					<input 
+						placeholder="Year" 
 						hw-num-only-input
 						maxlength="2" 
 						class="hw-input" 
 						type="text" name="" placeholder="year" ng-model="data.expiryYear.val">
+					<span class="hw-error-mes" ng-show="data.expiryYear.error.length">Invalid year.</span>
 				</div>
-			</div>
-			<div>
-				<span class="hw-error-mes" ng-show="data.expiryMonth.error.length">Invalid month.</span>
-				<span class="hw-error-mes" ng-show="data.expiryYear.error.length">Invalid year.</span>
 			</div>
 		</div>
 
-		<div >
+		<div class="hw-gap-bottom-20">
+			<!-- <div>CVC</div> -->
 			<div>
-				<div>CVC</div>
-				<div>
-					<input 
-						hw-num-only-input
-						maxlength="3" 
-						class="hw-input" type="text" name="" ng-model="data.cvc.val">
-				</div>
-				<span class="hw-error-mes" ng-show="data.cvc.error.length">Invalid.</span>
+				<input 
+					placeholder="CVC" 
+					hw-num-only-input
+					maxlength="3" 
+					class="hw-input" type="text" name="" ng-model="data.cvc.val">
 			</div>
-			
+			<div>
+				<span class="hw-error-mes" ng-show="data.cvc.error.length">Invalid CVC.</span>
+			</div>
 		</div>
 
 		<div class="hw-gap-bottom-20" style="background-color: #f6f6f6;
