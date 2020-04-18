@@ -1,0 +1,99 @@
+{
+	"id": "15e9fc6e-13d7-3357-1db6-fb09ee44da5b",
+	"name": "其他 copy",
+	"description": "",
+	"order": [
+		"19e538f6-4378-ea28-5da0-68980b8eb61c",
+		"46b5701b-6ce7-b2bd-172d-3775775a2fa2",
+		"24b7c880-5723-5a8a-676f-a102013d8b45",
+		"d1b2c288-2eee-3e5b-0c4a-e59a6f469d34"
+	],
+	"folders": [],
+	"timestamp": 1575627537343,
+	"owner": "9371897",
+	"public": false,
+	"requests": [
+		{
+			"id": "19e538f6-4378-ea28-5da0-68980b8eb61c",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://127.0.0.1:8080/getCodeUrl",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575627752135,
+			"name": "http://127.0.0.1:8080/getCodeUrl",
+			"description": "确保clientid 300110525 为免授权的",
+			"collectionId": "15e9fc6e-13d7-3357-1db6-fb09ee44da5b",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"redirect_uri\":\"hms://redirect_url\",\r\n\t\"scope\":\"openid email profile\",\r\n\t\"response_type\":\"code\",\r\n\t\"client_id\":\"1111111111\"\r\n}"
+		},
+		{
+			"id": "24b7c880-5723-5a8a-676f-a102013d8b45",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://127.0.0.1:8080/getClientTokenInfo",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "accessToken",
+					"value": "CF3qMwtpUkF3NnD6JcwjuP9I1MDB36SrIfy1WZaCnTxvjXQwyRnRaS1+TCTrjBuxt/Q6p+KfdJ0bGmnUOCO05Yl4HEg2tg/16qRFbOnEriSnlk5Hd6bZ/n9o",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575625944474,
+			"name": "http://127.0.0.1:8080/getClientTokenInfo",
+			"description": "接口OK",
+			"collectionId": "15e9fc6e-13d7-3357-1db6-fb09ee44da5b",
+			"responses": []
+		},
+		{
+			"id": "46b5701b-6ce7-b2bd-172d-3775775a2fa2",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://127.0.0.1:8080/getTokenByCode",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575627701335,
+			"name": "http://127.0.0.1:8080/getTokenByCode",
+			"description": "接口OK",
+			"collectionId": "15e9fc6e-13d7-3357-1db6-fb09ee44da5b",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"grant_type\":\"authorization_code\",\r\n\t\"code\":\"CF3qJH%2BDvqCJnrEGWlNcqXiCAtKuSN85pgxAqk6quRFBvQQkdZ0HpuVeugsj0Q3GiuPGZj50IqA1bYwhCLMz3tziuFEG8%2FVGI6t%2FceBV%2FPoAN4BLqiBps3hC3Yn41miuHzwspuhu%2B7B4W8a3NF425ES3KqtkNpZ%2B4VtNWWNoaOeUFwGd3GX1VMMOa7ed7JzNzQoK6YuLB3f30w%3D%3D\",\r\n\t\"redirect_uri\":\"hms://redirect_url\",\r\n\t\"client_id\":\"1111111111\",\r\n\t\"client_secret\":\"**********************************\"\r\n}"
+		},
+		{
+			"id": "d1b2c288-2eee-3e5b-0c4a-e59a6f469d34",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://127.0.0.1:8080/getDetailByIDToken",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575625550736,
+			"name": "http://127.0.0.1:8080/getDetailByIDToken",
+			"description": "",
+			"collectionId": "15e9fc6e-13d7-3357-1db6-fb09ee44da5b",
+			"responses": [],
+			"rawModeData": "idToken=eyJraWQiOiI2ZGY3YTQyYWZiZWVkYThmNDdkMDY0NmZlNzQ3NTQ5OTJhZGZkZjNmOWQ1ZmY5NTY2MDg2YzFhMzA3YTcwMDFlIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiU1JIQ3JFS0U0U3BveVJFSWNIVDJ3USIsInN1YiI6Ik1ERWZTdktHdUM1cTJCaWNuQlA0MmdCeTl2U05yaGJuVWI5VG1YNmpNTlVjbEVRIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuaHVhd2VpLmNvbSIsImdpdmVuX25hbWUiOiLokovpk4Hph5EiLCJkaXNwbGF5X25hbWUiOiLokovpk4Hph5EiLCJwaWN0dXJlIjoiaHR0cHM6Ly91cGZpbGUtZHJjbi5wbGF0Zm9ybS5oaWNsb3VkLmNvbS9GaWxlU2VydmVyL2ltYWdlL2IuMDAxMDA4NjAwMDMwMDE1OTE4NS4yMDE5MDcxNDE2Mjc0My4zODMzMDkwODkxNDg3MTAzNjY3OTI4NzY5ODEwOTMyNi4xMDAwLkJCQThEMDAyRDU2RDREMjU3MUJBMDc2NkE4NTk4ODUzMkJFNEI1NjhDOTQ3OTZFOTNBQkI3QUMyNEU1NTlBQTQuanBnIiwiYXVkIjoiMTAxNDU0MzE1IiwiYXpwIjoiMTAxNDU0MzE1IiwibmFtZSI6IuiSi-mTgemHkSIsImV4cCI6MTU3NTYyOTE2NiwiaWF0IjoxNTc1NjI1NTY2LCJlbWFpbCI6ImppYW5ndGllamluQGh1YXdlaS5jb20ifQ.W9Tx8Y4pr2kI61nlwTZL4CMWeg98i7vFpevaamuHsagehpRGIDke71ihLSa6casOYQSs6K_ch-DnbbK_zm388yWjkAhaaWhqujjRC72bqBa6CMG3XnITUCMPqpkPDa6SkJty6VhSYxKkns3IEQT7-6VeGOwxpCoG8FFrwfFCvjKAH43S0U6uN1rPHggrVzrS9ejDM7sv1AztA_AqlW3u1ZXvFjxHOYuEPvAA_p1rBkzftPIwhrPJvZiYVDk_yo0pBErIYLGJfEkOZggMeuYNFD7jvQ2ZN_Hjy2mLF3DsisLlfVHhobNL47kVaS44UTppHBspiyfKXQ6i8wlVfG4yvg"
+		}
+	]
+}

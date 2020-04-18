@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="client_id" content="asdfasdfo45423534 " />
+    <meta name="redirect_uri" content="https://google.com" />
+    <meta name="scope" content="openid+profile" />
+</head>
+
+<body>
+    <p> <button id="hwlogin" onclick=redirect()>HUAWEIID login</button></p>
+</body>
+<script type="text/javascript">
+  var client_id = '',
+      redirect_uri = '',
+      scope = '';
+  for (var metas = document.getElementsByTagName("meta"), i = 0; i < metas.length; ++i) {
+      switch (metas[i].name) {
+          case 'client_id':
+              client_id = metas[i].content;
+              break;
+          case 'redirect_uri':
+              redirect_uri = metas[i].content;
+              break;
+          case 'scope':
+              scope = metas[i].content;
+              break;
+          default:
+              break
+      }
+  }
+  var redirectUrl = 'https://oauth-login.cloud.huawei.com/oauth2/v3/authorize?' +
+      'response_type=code&access_type=offline&state=state_parameter_passthrough_value&client_id=' + client_id + '&redirect_uri=' + redirect_uri + '&scope=' + scope;
+
+  function redirect() {
+      window.location.href = redirectUrl;
+  }
+</script>
+
+</html>

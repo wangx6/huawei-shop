@@ -27,6 +27,7 @@
 	const spinner = require('./components/spinner/spinner.directive');
 	const paymentSuccess = require('./components/payment-success/payment-success.directive');
 	const numOnlyInput = require('./components/num-only-input/num-only-input.directive');
+	const siteBottom = require('./components/site-bottom/site-bottom.directive');
 
 	//---------------------------------------------------------
 	// -- CONTROLLER
@@ -95,6 +96,7 @@
 	app.directive('hwSpinner', spinner);
 	app.directive('hwNumOnlyInput', numOnlyInput);
 	app.directive('hwPaymentSuccess', paymentSuccess);
+	app.directive('hwSiteBottom', siteBottom);
 
 	//---------------------------------------------------------
 	//-- router configuration
