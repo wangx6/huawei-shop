@@ -106,9 +106,9 @@
 	    	.when('/', {templateUrl : 'product.html', controller: 'productController'})
 	    	.when('/product', {templateUrl : 'product.html', controller: 'productController'})
 	    	.when('/product-detail', {templateUrl : 'product-detail.html', controller:'productDetailController'})
-	    	.when('/bag', {templateUrl : 'bag.html', controller: 'bagController'})
-	    	.when('/checkout', {templateUrl : 'checkout.html', controller: 'checkoutController'})
-	    	.when('/delivery-address', {templateUrl : 'delivery-address.html', controller: 'deliveryAddressController'})
+	    	// .when('/bag', {templateUrl : 'bag.html', controller: 'bagController'})
+	    	// .when('/checkout', {templateUrl : 'checkout.html', controller: 'checkoutController'})
+	    	// .when('/delivery-address', {templateUrl : 'delivery-address.html', controller: 'deliveryAddressController'})
 	    }
 	]);
 })();

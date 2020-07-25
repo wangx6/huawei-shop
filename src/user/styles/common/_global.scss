@@ -38,6 +38,9 @@ $regular: 1rem;
 $small: 0.8rem;
 $x-small: 0.6rem;
 
+
+$dt_page_width: 100%;
+
 $header-height: 57px;
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -49,13 +52,12 @@ body,
 html {
   font-size: 13px;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
+  background-color: #f2f2f2;
   // filter: grayscale(100%);
 }
 
 body {
   overflow-x: hidden;
-  padding-bottom: 100px;
 }
 
 div {
@@ -65,19 +67,7 @@ div {
     // CSS property
     font-size: 1.2rem;
 }
-.hw-header{
-    height: $header-height;
-    padding: 0 20px;
-    background-color: $main-color;
-    color: #fff;
-    @include flexbox;
-    @include align-items(center);
-    .hw-back{
-      position: absolute;
-      left: 20px;
-      font-size: 2rem;
-    }
-}
+
 .hw-error-mes{
   color: $red;
   font-size: $small;
@@ -130,7 +120,6 @@ div {
     font-size: 2.9rem;
     z-index: 999;
     border: 1px solid #eee;
-    
 }
 .hw-currency {
   font-size: 0.7rem;
@@ -148,9 +137,8 @@ div {
 
 .hw-page {
   // background: $x-light-grey;
-  background-color: #fff;
-  padding: 20px 15px 0 15px;
-  margin-bottom: 200px;
+  background-color: transparent;
+  margin-bottom: 300px;
   .white {
     background-color: #fff;
   }
@@ -159,7 +147,6 @@ div {
 .hw-page-title {
   font-size: 1.5rem;
   font-weight: bolder;
-  text-align: center;
 }
 
 .hw-page-title-secondary {
@@ -531,4 +518,12 @@ button:focus {
   padding: 20px;
   margin-bottom: 10px;
   box-shadow: 0 2px 2px #ccc;
+}
+
+@media screen and (min-width: 768px) {
+  .hw-page{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $dt_page_width;
+  }
 }
