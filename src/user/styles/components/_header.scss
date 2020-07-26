@@ -11,7 +11,7 @@
         background-color: transparent;
         width: $dt_page_width;
 
-        height: 100px;
+        height: $header-height;
 
         .hw-header-content{
             width: 1200px;
@@ -31,11 +31,15 @@
             }
         }
         .hw-logo{
-            height: 94px;
-            width: 150px;
+            height: 75px;
+            width: 122px;
             background-image: url("../img/loeasy-logo.png");
             background-size: cover;
         }
+    }
+    &.hw-header-revert{
+        color: black !important;
+        background-color: #fff;
     }
 }
 

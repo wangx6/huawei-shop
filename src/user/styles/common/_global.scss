@@ -19,7 +19,7 @@ $lime: #32CD32;
 $red: #cf1930;
 $blue: #003F87;
 $orange: #e95532;
-
+$light-blue: #0198E1;
 $x-light-green: #eef6eb;
 $light-green: #c1dab4;
 $green: #65b143;
@@ -41,7 +41,9 @@ $x-small: 0.6rem;
 
 $dt_page_width: 100%;
 
-$header-height: 57px;
+$dt_page_content_width: 1200px;
+
+$header-height: 100px;
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill {
@@ -138,7 +140,6 @@ div {
 .hw-page {
   // background: $x-light-grey;
   background-color: transparent;
-  margin-bottom: 300px;
   .white {
     background-color: #fff;
   }
