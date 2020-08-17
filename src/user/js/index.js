@@ -5,6 +5,7 @@
 	// -- dev dependencies
 	//---------------------------------------------------------
 	const angular = require('angular');
+	const jQuery = require('jQuery');
 
 	//---------------------------------------------------------
 	// -- app dependencies
@@ -58,6 +59,7 @@
 	//-- constants
 	//---------------------------------------------------------
 	app.constant('token', document.getElementById('rr-session-token').value);
+	app.constant('jQuery', jQuery);
 
 	//---------------------------------------------------------
 	//-- directives

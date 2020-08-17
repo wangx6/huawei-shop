@@ -5,11 +5,12 @@
 			
 		</div>
 		<div class="d-flex justify-content-end">
-			<div ng-mouseover="onMouseover()"  class="hw-header__navi-items">Products</div>
-			<div class="hw-header__navi-items">Our Projects</div>
-			<div class="hw-header__navi-items">News & Events</div>
-			<div class="hw-header__navi-items">About us</div>
-			<div class="hw-header__navi-items">Contact us</div>
+			<!-- <div ng-mouseover="onMouseover()"  class="hw-header__navi-items">Products</div> -->
+			<div class="hw-header__navi-items" ng-click="onClickProjects()">Our Projects</div>
+			<div class="hw-header__navi-items" ng-click="onClickProducts()">Our Products</div>
+			<div class="hw-header__navi-items" ng-click="onClickNewsEvt()">News & Events</div>
+			<div class="hw-header__navi-items" ng-click="onClickAboutUs()">About us</div>
+			<div class="hw-header__navi-items" ng-click="onClickContactUs()">Contact us</div>
 		</div>
 
 		<div class="hw-products-drop-down" ng-show="showProducts">products</div>
@@ -23,22 +24,102 @@
 			
 		</div>
 		<div class="d-flex justify-content-end">
-			<div ng-mouseover="onMouseover()"  class="hw-header__navi-items">Products</div>
-			<div class="hw-header__navi-items">Our Projects</div>
-			<div class="hw-header__navi-items">News & Events</div>
-			<div class="hw-header__navi-items">About us</div>
-			<div class="hw-header__navi-items">Contact us</div>
+			<!-- <div ng-mouseover="onMouseover()"  class="hw-header__navi-items">Products</div> -->
+			<div class="hw-header__navi-items" ng-click="onClickProjects()">Our Projects</div>
+			<div class="hw-header__navi-items" ng-click="onClickProducts()">Our Products</div>
+			<div class="hw-header__navi-items" ng-click="onClickNewsEvt()">News & Events</div>
+			<div class="hw-header__navi-items" ng-click="onClickAboutUs()">About us</div>
+			<div class="hw-header__navi-items" ng-click="onClickContactUs()">Contact us</div>
 		</div>
+	</div>
+</div>
 
-		<div class="hw-products-drop-down" ng-show="showProducts" ng-mouseleave="onMouseLeaveProducts()">
-			<div class="hw-products-drop-down-wrap">
+
+<div class="hw-page hw-product-page">
+	<div class="hw-page-blk hw-main-blk">
+		<div class="hw-slide-show"></div>
+	</div>
+
+	<div class="hw-page-blk">
+		
+		<div class="hw-page-content hw-projects hw-gap-top-20">
+			<div class="hw-page-title">Our Projects</div>
+			<div class="hw-projects-wrap d-flex justify-content-between flex-wrap">
+				<div class="hw-projects-item">
+					<!-- <div>Huawei</div> -->
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">Huawei</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name" >Intel</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies </div>
+
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">Anorts</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies </div>
+
+				</div>
+			</div>
+			<div class="d-flex justify-content-between flex-wrap">
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">Aviva</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">RTE</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">Google</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+			</div>
+			<div class="d-flex justify-content-between">
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">AIB</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">AIB</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+				<div class="hw-projects-item">
+					<div class="hw-project-item-parterner-img"></div>
+					<div class="hw-project-item-parterner-name">City Concil</div>
+					<div class="hw-project-item-partner-detail">Am terminated it excellence invitation projection as. She graceful 
+						shy believed distance use nay. Lively is people so basket ladies </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="hw-page-blk">
+		<div class="hw-page-content hw-products hw-gap-top-20">
+			<div class="hw-page-title">Products</div>
+			<div class="hw-products-content-wrap">
 				<div class="hw-products-drop-down-row d-flex justify-content-between">
 					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
 						<div class="hw-products-drop-down-cell-image-wrap">
 							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
 						</div>
 						<div>
-							<div class="hw-product-drop-down-title">P4</div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
 							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
 								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
 								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
@@ -73,14 +154,14 @@
 						</div>
 					</div>
 				</div>
-	
+				
 				<div class="hw-products-drop-down-row d-flex justify-content-between">
 					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
 						<div class="hw-products-drop-down-cell-image-wrap">
 							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
 						</div>
 						<div>
-							<div class="hw-product-drop-down-title">P10</div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
 							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
 								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
 								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
@@ -93,7 +174,7 @@
 							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
 						</div>
 						<div>
-							<div class="hw-product-drop-down-title">P12</div>
+							<div class="hw-product-drop-down-title">P5</div>
 							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
 								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
 								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
@@ -106,7 +187,7 @@
 							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
 						</div>
 						<div>
-							<div class="hw-product-drop-down-title">P15</div>
+							<div class="hw-product-drop-down-title">P8</div>
 							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
 								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
 								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
@@ -115,48 +196,176 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
+				<div class="hw-products-drop-down-row d-flex justify-content-between">
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P5</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P8</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-<div class="hw-page hw-product-page">
-	<div class="hw-page-blk hw-main-blk">
-		<div class="hw-slide-show"></div>
-	</div>
+				<div class="hw-products-drop-down-row d-flex justify-content-between">
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P5</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P8</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-	<div class="hw-page-blk">
-		
-		<div class="hw-page-content hw-projects hw-gap-top-20">
-			<div class="hw-page-title">Our Projects</div>
-			<div class="hw-projects-wrap d-flex justify-content-between">
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>Huawei</div>
+				<div class="hw-products-drop-down-row d-flex justify-content-between">
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P5</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P8</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>Intel</div>
+
+				<div class="hw-products-drop-down-row d-flex justify-content-between">
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title" on-click="onClick ">P4</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P5</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
+					<div class="hw-products-drop-down-row-cell d-flex align-items-center">
+						<div class="hw-products-drop-down-cell-image-wrap">
+							<img class="hw-products-drop-down-cell-image" ng-src="img/sample-2.png" alt="single p4 led panel and what it looks like from back">
+						</div>
+						<div>
+							<div class="hw-product-drop-down-title">P8</div>
+							<div class="hw-product-drop-down-spec d-flex justify-content-between flex-column">
+								<div class="hw-product-drop-down-spec-item">Pixel spacing: 4mm</div>
+								<div class="hw-product-drop-down-spec-item">Width: 400mm</div>
+								<div class="hw-product-drop-down-spec-item">Height: 400mm</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>Anorts</div>
-				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>City Concil</div>
-				</div>
-			</div>
-			<div class="d-flex justify-content-between">
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>Aviva</div>
-				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>RTE</div>
-				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>Google</div>
-				</div>
-				<div class="hw-projects-item d-flex justify-content-center align-items-center">
-					<div>AIB</div>
-				</div>
+
+				
 			</div>
 		</div>
 	</div>
@@ -185,6 +394,44 @@
 					</div>
 					
 				</div>
+
+				<div class="hw-news-evt-row d-flex justify-content-between">
+					<div class="hw-news-evt-item">
+						<div><img ng-src="./img/sample-3.jpg" alt=""></div>
+						<div class="hw-news-evt-item-title">Break through high definition energy saving by 50%</div>
+						<div>
+							<div class="hw-news-evt-item-date">12-12-2020</div>
+						</div>
+					</div>
+					<div class="hw-news-evt-item">
+						<div><img ng-src="./img/sample-4.jpg" alt=""></div>
+						<div class="hw-news-evt-item-title">One more major partner joined Loeasy group.</div>
+						<div>
+							
+							<div class="hw-news-evt-item-date">12-12-2020</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="hw-news-evt-row d-flex justify-content-between">
+					<div class="hw-news-evt-item">
+						<div><img ng-src="./img/sample-3.jpg" alt=""></div>
+						<div class="hw-news-evt-item-title">Break through high definition energy saving by 50%</div>
+						<div>
+							<div class="hw-news-evt-item-date">12-12-2020</div>
+						</div>
+					</div>
+					<div class="hw-news-evt-item">
+						<div><img ng-src="./img/sample-4.jpg" alt=""></div>
+						<div class="hw-news-evt-item-title">One more major partner joined Loeasy group.</div>
+						<div>
+							
+							<div class="hw-news-evt-item-date">12-12-2020</div>
+						</div>
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -192,23 +439,20 @@
 
 	<div class="hw-page-blk">
 		
-		<div  class="hw-page-content d-flex justify-content-between">
-			<div style="width: 50%;">
+		<div  class="hw-page-content hw-about-us">
+			<h3 class="hw-page-title">
+				About Us
+			</h3>
+			<!-- <div style="width: 50%;">
 				<img style="width: 100%;" ng-src="./img/about-us.jpg" alt="loeasy uniform with its logo over the chest area">
-			</div>
-			<div style="width: 50%; padding-left: 20px;">
+			</div> -->
+			<div style="width: 100%; background-color: #fff; padding: 30px;">
 				<div style="width:100%">
-					<h3 class="hw-page-title">
-						About Us
-					</h3>
 					<p  style="font-size: 0.9rem;">
 						LoEasy Technology Ltd is established as of May 2018 as a China-Ireland joint enterprise. With a successful and long standing business in China, installing and exporting Qiang Li LED screens around the world we are investing in Ireland with a long term view to building a strong business through the most outstanding customer service, delivering the highest quality products and at competitive pricing.Our showroom on The Long Mile Road Dublin 12 allows customers to experience our range of products from large high resolution screens to small single colour LED displays. We will use the best LED display products and the most professional installation and sales support experience to bring you the highest quality and most recent world leading technology to the Irish, UK and European market.
 					</p>
 				</div>
 				<div style="width: 100%;">
-					<h3 class="hw-page-title">
-						Our Commitment
-					</h3>
 					<div style="font-size: 0.9rem;">
 						<div>
 							<div class="commitment-sub-title" style="font-weight: bold; margin-top: 15px;">
@@ -288,3 +532,4 @@
 
 
 
+ 
